@@ -1061,11 +1061,15 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
     <div class="slide-pad">
 
         <div class="badge">
-            <span class="badge-num">02</span>Tipos de Solicitudes
+            <span class="badge-num">05</span>
+            Tipos de Solicitudes
         </div>
 
-   
+        <h2 class="title-xl" style="margin-bottom:1rem;">
+            Gestión de Cortesías
+        </h2>
 
+        <!-- TIPOS DE SOLICITUD -->
         <div style="
             display:grid;
             grid-template-columns:repeat(3,1fr);
@@ -1073,11 +1077,11 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
             margin-bottom:1.5rem;
         ">
 
-            <!-- TN -->
+            <!-- TELCONET -->
             <div class="task-card">
                 <span class="task-proc-tag">TELCONET</span>
 
-                <ul style="margin-top:1rem;line-height:1.8;">
+                <ul style="margin-top:1rem;line-height:1.6;">
                     <li>Instalación</li>
                     <li>Reubicación</li>
                     <li>Traslado</li>
@@ -1088,11 +1092,11 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                 </ul>
             </div>
 
-            <!-- MD -->
+            <!-- MEGADATOS -->
             <div class="task-card">
                 <span class="task-proc-tag">MEGADATOS</span>
 
-                <ul style="margin-top:1rem;line-height:1.8;">
+                <ul style="margin-top:1rem;line-height:1.6;">
                     <li>Instalación</li>
                     <li>Reubicación</li>
                     <li>Traslado</li>
@@ -1103,11 +1107,11 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                 </ul>
             </div>
 
-            <!-- SD -->
+            <!-- SECURITY DATA -->
             <div class="task-card">
                 <span class="task-proc-tag">SECURITY DATA</span>
 
-                <ul style="margin-top:1rem;line-height:1.8;">
+                <ul style="margin-top:1rem;line-height:1.6;">
                     <li>Solicitud FE</li>
                     <li>Renovación FE</li>
                 </ul>
@@ -1115,46 +1119,182 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 
         </div>
 
-        <!-- Proceso -->
+        <!-- PROCESO DE GESTIÓN COMERCIAL -->
         <div class="task-card">
 
             <span class="task-proc-tag">
                 Proceso de Gestión Comercial
             </span>
 
-            <div style="margin-top:1rem;font-size:1.05rem;line-height:1.7;">
+            <div style="
+                margin-top:1rem;
+                margin-bottom:1.5rem;
+                font-size:1rem;
+                line-height:1.6;
+                color:#d7e8ff;
+            ">
+                Para gestionar una cortesía se debe generar una
+                <b>tarea asignada a PEI</b>,
+                con el proceso respectivo de acuerdo al producto solicitado.
+            </div>
 
-                <p>
-                    Para gestionar una cortesía se debe generar una
-                    <b>tarea asignada a PEI</b>,
-                    con el proceso respectivo de acuerdo al producto solicitado.
-                </p>
+            <div style="
+                display:grid;
+                grid-template-columns:1fr 70px 1fr 70px 1fr;
+                align-items:start;
+                gap:.5rem;
+            ">
 
-                <div class="task-meta" style="margin:1rem 0;">
-                    <span>
-                        Proceso:
-                        <b>Tareas de PEI - Gestión Comercial</b>
-                    </span>
+                <!-- PASO 1 -->
+                <div>
+
+                    <div style="
+                        width:160px;
+                        height:160px;
+                        margin:0 auto 1rem;
+                        border-radius:50%;
+                        background:#5d97d3;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        text-align:center;
+                        color:white;
+                        font-weight:700;
+                        font-size:1.1rem;
+                        padding:1rem;
+                    ">
+                        Departamento<br>
+                        Solicitante
+                    </div>
+
+                    <div style="
+                        background:rgba(93,151,211,.25);
+                        border:1px solid rgba(255,255,255,.15);
+                        border-radius:18px;
+                        padding:1rem;
+                        min-height:140px;
+                    ">
+                        <ul style="line-height:1.5;">
+                            <li>Genera la tarea</li>
+                            <li>Completa y adjunta el formulario</li>
+                            <li>Adjunta la autorización requerida</li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <ul style="line-height:1.8;">
-                    <li>
-                        Adjuntar el <b>Formulario de Cortesía</b> con la
-                        información completa.
-                    </li>
-                    <li>
-                        Incluir la <b>Autorización</b> correspondiente
-                        según el tipo de cortesía.
-                    </li>
-                </ul>
+                <!-- FLECHA -->
+                <div style="
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:3rem;
+                    color:#9ec4ff;
+                    font-weight:bold;
+                ">
+                    ➜
+                </div>
 
+                <!-- PASO 2 -->
+                <div>
+
+                    <div style="
+                        width:160px;
+                        height:160px;
+                        margin:0 auto 1rem;
+                        border-radius:50%;
+                        background:#5d97d3;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        text-align:center;
+                        color:white;
+                        font-weight:700;
+                        font-size:1.1rem;
+                        padding:1rem;
+                    ">
+                        PEI<br>
+                        Validación e Ingreso
+                    </div>
+
+                    <div style="
+                        background:rgba(93,151,211,.25);
+                        border:1px solid rgba(255,255,255,.15);
+                        border-radius:18px;
+                        padding:1rem;
+                        min-height:140px;
+                    ">
+                        <ul style="line-height:1.5;">
+                            <li>Valida adjuntos</li>
+                            <li>Revisa la información del formato</li>
+                            <li>Realiza el ingreso del producto correspondiente</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <!-- FLECHA -->
+                <div style="
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    font-size:3rem;
+                    color:#9ec4ff;
+                    font-weight:bold;
+                ">
+                    ➜
+                </div>
+
+                <!-- PASO 3 -->
+                <div>
+
+                    <div style="
+                        width:160px;
+                        height:160px;
+                        margin:0 auto 1rem;
+                        border-radius:50%;
+                        background:#5d97d3;
+                        display:flex;
+                        align-items:center;
+                        justify-content:center;
+                        text-align:center;
+                        color:white;
+                        font-weight:700;
+                        font-size:1.1rem;
+                        padding:1rem;
+                    ">
+                        PEI<br>
+                        Implementación
+                    </div>
+
+                    <div style="
+                        background:rgba(93,151,211,.25);
+                        border:1px solid rgba(255,255,255,.15);
+                        border-radius:18px;
+                        padding:1rem;
+                        min-height:140px;
+                    ">
+                        <ul style="line-height:1.5;">
+                            <li>Coordina la implementación con el área correspondiente</li>
+                            <li>Realiza seguimiento hasta la activación</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="task-meta" style="margin-top:1.5rem;">
+                <span>
+                    Proceso:
+                    <b>Tareas de PEI - Gestión Comercial</b>
+                </span>
             </div>
 
         </div>
 
     </div>
 </section>
-
 
 
 
