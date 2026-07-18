@@ -708,7 +708,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 
 <div class="slide-pad" style="padding:clamp(1rem,2.5vw,2rem) clamp(1.4rem,4vw,3.5rem);display:flex;flex-direction:column;justify-content:center;gap:.3rem;">
   <div style="text-align:center;margin-bottom:.2rem;">
-    <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:700;color:#c4b5fd;letter-spacing:.02em;margin:0;">Equipo Planificación</h2>
+    <h2 style="font-size:clamp(1.5rem,2.6vw,2.1rem);font-weight:700;color:#c4b5fd;letter-spacing:.02em;margin:0;">Empresas</h2>
   </div>
   <div style="flex:1;min-height:0;position:relative;">
     <svg id="hub-svg" viewBox="0 0 900 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;max-height:calc(100vh - 170px);display:block;">
@@ -741,28 +741,21 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
       <circle cx="450" cy="260" r="72" fill="none" stroke="#a78bfa" stroke-width="0.5" stroke-dasharray="4,6" opacity="0.3"/>
 
       <!-- ===== SPOKE LINES ===== -->
-      <!-- 1 Gestión 1a1 (top-left): node center ≈ (150,72) -->
-      <path d="M 240,88 Q 330,162 418,232" fill="none" stroke="#a78bfa" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
+      
       <!-- 2 Cliente Nacional (top-CENTER STRAIGHT): node center ≈ (452,44) - vertical line -->
       <line x1="452" y1="82" x2="452" y2="230" stroke="#38bdf8" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
-      <!-- 3 Tercerizados (top-right): node center ≈ (750,72) -->
-      <path d="M 660,88 Q 570,162 484,232" fill="none" stroke="#a78bfa" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
+     
       <!-- 4 Proyectos Corp (right): node center ≈ (834,238) -->
       <path d="M 772,238 Q 650,250 520,258" fill="none" stroke="#38bdf8" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
-      <!-- 5 Planif.Proyectos (bottom-right): node center ≈ (725,418) -->
-      <path d="M 682,395 Q 594,334 494,282" fill="none" stroke="#a78bfa" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
-      <!-- 6 Cortesías (bottom-center): node center ≈ (418,450) -->
-      <line x1="450" y1="422" x2="450" y2="306" stroke="#38bdf8" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
-      <!-- 7 Reingenierías (bottom-left): node center ≈ (167,418) -->
-      <path d="M 214,395 Q 308,334 406,282" fill="none" stroke="#a78bfa" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
+      
       <!-- 8 Banca (left): node center ≈ (67,238) -->
       <path d="M 130,238 Q 252,252 382,258" fill="none" stroke="#38bdf8" stroke-width="1.3" opacity="0.5" stroke-dasharray="3,4" marker-start="url(#dot)"/>
 
       <!-- ===== HUB CENTER ===== -->
       <circle cx="450" cy="258" r="56" fill="#0d0f1f" stroke="#a78bfa" stroke-width="1.5" opacity="0.6"/>
       <circle cx="450" cy="258" r="50" fill="url(#hubGrad)" filter="url(#hubGlow)"/>
-      <text x="450" y="252" text-anchor="middle" font-family="Poppins,Inter,sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="0.5">EQUIPO DE</text>
-      <text x="450" y="270" text-anchor="middle" font-family="Poppins,Inter,sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="0.5">PLANIFICACIÓN</text>
+      <text x="450" y="252" text-anchor="middle" font-family="Poppins,Inter,sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="0.5">GESTIÓN</text>
+      <text x="450" y="270" text-anchor="middle" font-family="Poppins,Inter,sans-serif" font-size="12" font-weight="700" fill="white" letter-spacing="0.5">CORTESÍAS</text>
       <circle cx="450" cy="258" r="58" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.15">
         <animate attributeName="r" values="58;78;58" dur="3s" repeatCount="indefinite"/>
         <animate attributeName="opacity" values="0.2;0;0.2" dur="3s" repeatCount="indefinite"/>
@@ -770,15 +763,6 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 
       <!-- ===== SPOKE NODES (larger blocks w=200, h=76) ===== -->
 
-      <!-- 1: Gestión 1 a 1 (top-left) translate(47, 28) w=200 h=76 -->
-      <g transform="translate(47,28)">
-        <rect width="200" height="76" rx="9" fill="#1a1d2e" stroke="#a78bfa" stroke-width="1.2" opacity="0.92"/>
-        <rect width="200" height="5" rx="2.5" fill="#a78bfa" opacity="0.75"/>
-        <circle cx="24" cy="33" r="8" fill="none" stroke="#a78bfa" stroke-width="1.4"/>
-        <path d="M13,52 Q24,44 35,52" fill="none" stroke="#a78bfa" stroke-width="1.4"/>
-        <text x="44" y="29" font-family="Poppins,Inter,sans-serif" font-size="11" font-weight="700" fill="#e8e3ff">Gestión 1 a 1</text>
-        <text x="44" y="44" font-family="Inter,sans-serif" font-size="9.5" fill="#9aa3b8">Clientes corp. individuales</text>
-      </g>
 
       <!-- 2: Cliente Nacional (top-CENTER — straight above hub) translate(352, 6) w=200 h=76 -->
       <g transform="translate(352,6)">
@@ -789,14 +773,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
         <text x="48" y="44" font-family="Inter,sans-serif" font-size="9.5" fill="#9aa3b8">Gestión personalizada VIP</text>
       </g>
 
-      <!-- 3: Tercerizados (top-right) translate(650, 28) w=200 h=76 -->
-      <g transform="translate(650,28)">
-        <rect width="200" height="76" rx="9" fill="#1a1d2e" stroke="#a78bfa" stroke-width="1.2" opacity="0.92"/>
-        <rect width="200" height="5" rx="2.5" fill="#a78bfa" opacity="0.75"/>
-        <path d="M12,37 L20,28 L26,33 L32,28 L40,37" fill="none" stroke="#a78bfa" stroke-width="1.5" stroke-linecap="round"/>
-        <text x="52" y="29" font-family="Poppins,Inter,sans-serif" font-size="11" font-weight="700" fill="#e8e3ff">Tercerizados</text>
-        <text x="52" y="44" font-family="Inter,sans-serif" font-size="9.5" fill="#9aa3b8">Coord. proveedores externos</text>
-      </g>
+
 
       <!-- 4: Proyectos Corp. Masivos (right) translate(773, 196) w=125 h=90 -->
       <g transform="translate(773,196)">
@@ -809,44 +786,8 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
         <text x="8" y="78" font-family="Poppins,Inter,sans-serif" font-size="10" font-weight="700" fill="#e8e3ff">Masivos</text>
       </g>
 
-      <!-- 5: Planif. Proyectos Públicos (bottom-right) translate(608, 370) w=195 h=85 -->
-      <g transform="translate(608,370)">
-        <rect width="195" height="85" rx="9" fill="#1a1d2e" stroke="#a78bfa" stroke-width="1.2" opacity="0.92"/>
-        <rect width="195" height="5" rx="2.5" fill="#a78bfa" opacity="0.75"/>
-        <line x1="13" y1="22" x2="13" y2="50" stroke="#a78bfa" stroke-width="1.5"/>
-        <polygon points="13,22 34,28 13,38" fill="none" stroke="#a78bfa" stroke-width="1.3"/>
-        <text x="46" y="28" font-family="Poppins,Inter,sans-serif" font-size="10" font-weight="700" fill="#e8e3ff">Planif. Proyectos</text>
-        <text x="46" y="42" font-family="Poppins,Inter,sans-serif" font-size="10" font-weight="700" fill="#e8e3ff">Públicos</text>
-        <text x="46" y="58" font-family="Inter,sans-serif" font-size="9" fill="#9aa3b8">Contractual y O&amp;M</text>
-      </g>
-
-      <!-- 6: Cortesías (bottom-center) translate(283, 422) w=220 h=72 -->
-      <!-- Icon: tag with "$0" = costo cero product -->
-      <g transform="translate(340,422)">
-        <rect width="220" height="72" rx="9" fill="#1a1d2e" stroke="#38bdf8" stroke-width="1.2" opacity="0.92"/>
-        <rect width="220" height="5" rx="2.5" fill="#38bdf8" opacity="0.75"/>
-        <!-- Cost-zero icon: tag with $0 -->
-        <path d="M10,42 L10,28 L22,16 L36,24 L36,42 Z" fill="none" stroke="#38bdf8" stroke-width="1.4" stroke-linejoin="round"/>
-        <circle cx="29" cy="21" r="2.5" fill="#38bdf8" opacity="0.7"/>
-        <text x="14" y="38" font-family="Inter,sans-serif" font-size="9.5" font-weight="700" fill="#38bdf8">$0</text>
-        <text x="48" y="29" font-family="Poppins,Inter,sans-serif" font-size="11" font-weight="700" fill="#e8e3ff">Cortesías</text>
-        <text x="48" y="44" font-family="Inter,sans-serif" font-size="9.5" fill="#9aa3b8">Gestión de cortesías</text>
-      </g>
-
-      <!-- 7: Reingenierías (bottom-left) translate(97, 370) w=195 h=85 -->
-      <g transform="translate(97,370)">
-        <rect width="195" height="85" rx="9" fill="#1a1d2e" stroke="#a78bfa" stroke-width="1.2" opacity="0.92"/>
-        <rect width="195" height="5" rx="2.5" fill="#a78bfa" opacity="0.75"/>
-        <circle cx="15" cy="35" r="6" fill="none" stroke="#a78bfa" stroke-width="1.3"/>
-        <circle cx="36" cy="22" r="5" fill="none" stroke="#a78bfa" stroke-width="1.3"/>
-        <circle cx="36" cy="48" r="5" fill="none" stroke="#a78bfa" stroke-width="1.3"/>
-        <line x1="21" y1="33" x2="31" y2="25" stroke="#a78bfa" stroke-width="1.2"/>
-        <line x1="21" y1="38" x2="31" y2="45" stroke="#a78bfa" stroke-width="1.2"/>
-        <text x="52" y="29" font-family="Poppins,Inter,sans-serif" font-size="10.5" font-weight="700" fill="#e8e3ff">Reingenierías</text>
-        <text x="52" y="43" font-family="Inter,sans-serif" font-size="9" fill="#9aa3b8">Separación de enlaces</text>
-        <text x="52" y="55" font-family="Inter,sans-serif" font-size="9" fill="#9aa3b8">compartidos</text>
-      </g>
-
+     
+   
       <!-- 8: Banca (left) translate(0, 196) w=130 h=90 -->
       <g transform="translate(0,196)">
         <rect width="130" height="90" rx="9" fill="#1a1d2e" stroke="#38bdf8" stroke-width="1.2" opacity="0.92"/>
@@ -881,7 +822,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
     <div>
       <div class="task-card">
       <span class="task-proc-tag">TELCONET</span>
-      <p>Requerimientos Internos en Telconet:</p>
+      <p>Las cortesías deben registrarse únicamente bajo la Razón Social de TELCONET, respetando los lineamientos y parámetros de nomenclatura establecidos para cada tipo de servicio.</p>
            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:.85rem;">
     <div class="task-card">
       <span class="task-proc-tag">Cortesía por Teletrabajo</span>
