@@ -1497,216 +1497,224 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 
   <style>
     .rt-tabs { display:flex; gap:.55rem; margin-bottom:1rem; flex-wrap:wrap; }
-
     .rt-btn {
       display:flex; align-items:center; gap:.5rem;
-      padding:.55rem .9rem;
-      border-radius:10px;
+      padding:.55rem .9rem; border-radius:10px;
       border:1.5px solid rgba(255,255,255,.12);
       background:rgba(255,255,255,.05);
-      color:#8ab4d4;
-      font-size:.82rem; font-weight:500;
-      cursor:pointer;
-      transition:border-color .18s, background .18s, color .18s;
+      color:#8ab4d4; font-size:.82rem; font-weight:500;
+      cursor:pointer; transition:border-color .18s, background .18s, color .18s;
     }
     .rt-btn:hover { background:rgba(255,255,255,.09); border-color:rgba(255,255,255,.22); }
-
-    .rt-btn .rt-dot {
-      width:10px; height:10px; border-radius:50%; flex-shrink:0;
-      transition:box-shadow .2s;
-    }
-    .rt-btn .rt-count {
-      font-size:.7rem; font-weight:700;
-      padding:.15rem .45rem; border-radius:20px;
-      margin-left:.1rem;
-      transition:background .2s, color .2s;
-    }
-
-    /* Telconet — Cyan */
+    .rt-btn .rt-dot { width:10px; height:10px; border-radius:50%; flex-shrink:0; transition:box-shadow .2s; }
+    .rt-btn .rt-count { font-size:.7rem; font-weight:700; padding:.15rem .45rem; border-radius:20px; margin-left:.1rem; }
     .rt-btn.rt-tn  { --c:#00c9ff; --cbg:rgba(0,201,255,.1); }
-    /* Telconet DC — Light Blue */
     .rt-btn.rt-dc  { --c:#38bdf8; --cbg:rgba(56,189,248,.1); }
-    /* Megadatos — Orange */
     .rt-btn.rt-mg  { --c:#ff9900; --cbg:rgba(255,153,0,.1); }
-    /* Security Data — Green */
     .rt-btn.rt-sd  { --c:#00e576; --cbg:rgba(0,229,118,.1); }
-
-    .rt-btn .rt-dot  { background: var(--c); }
-    .rt-btn .rt-count { background: var(--cbg); color: var(--c); }
-
-    .rt-btn.active {
-      background: var(--cbg);
-      border-color: var(--c);
-      color: #fff;
-    }
+    .rt-btn .rt-dot   { background:var(--c); }
+    .rt-btn .rt-count { background:var(--cbg); color:var(--c); }
+    .rt-btn.active { background:var(--cbg); border-color:var(--c); color:#fff; }
     .rt-btn.active .rt-dot { box-shadow:0 0 0 3px var(--cbg); }
 
     .res-tab-panel { display:none; }
     .res-tab-panel.active { display:block; }
 
     .res-card {
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.1);
-      border-radius:12px;
-      padding:.85rem 1rem;
-      transition:border-color .15s;
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      border-radius:12px; padding:.85rem 1rem; transition:border-color .15s;
     }
     .res-card:hover { border-color:rgba(255,255,255,.22); }
     .res-card-title { font-size:.95rem; font-weight:700; color:#e0eeff; margin-bottom:.4rem; }
-    .res-card-desc { font-size:.78rem; color:#7a9cbf; margin-bottom:.2rem; line-height:1.4; }
+    .res-card-desc { font-size:.75rem; color:#7a9cbf; margin-bottom:.2rem; line-height:1.35; }
     .res-card-desc b { color:#a0bcd8; }
     .res-card-links { margin-top:.6rem; display:flex; flex-wrap:wrap; gap:.4rem; }
+
     .res-link {
       display:inline-flex; align-items:center; gap:.35rem;
-      font-size:.75rem; font-weight:500;
-      background:rgba(0,201,255,.1); color:#00c9ff;
-      border:1px solid rgba(0,201,255,.25);
+      font-size:.73rem; font-weight:500;
       border-radius:6px; padding:.3rem .65rem;
-      text-decoration:none;
-      transition:background .15s, border-color .15s;
+      text-decoration:none; transition:background .15s, border-color .15s;
     }
-    .res-link:hover { background:rgba(0,201,255,.18); border-color:rgba(0,201,255,.5); }
-    .res-link svg { width:12px; height:12px; stroke:#00c9ff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+    .res-link svg { width:11px; height:11px; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
     .no-format {
-      display:inline-block; margin-top:.5rem;
-      font-size:.72rem; font-weight:600;
+      display:inline-block; margin-top:.5rem; font-size:.7rem; font-weight:600;
       background:rgba(255,100,100,.08); color:#ff7b7b;
-      border:1px solid rgba(255,100,100,.2);
-      border-radius:6px; padding:.25rem .6rem;
+      border:1px solid rgba(255,100,100,.2); border-radius:6px; padding:.22rem .55rem;
     }
+
+    /* Chips de tarea compactos */
+    .task-chips { display:flex; flex-direction:column; gap:.28rem; margin:.5rem 0 .3rem; }
+    .task-chip {
+      display:flex; align-items:flex-start; gap:.4rem;
+      font-size:.72rem; color:#7a9cbf; line-height:1.3;
+    }
+    .task-chip::before {
+      content:''; width:5px; height:5px; border-radius:50%;
+      background:#38bdf8; flex-shrink:0; margin-top:.35rem; opacity:.7;
+    }
+
+    /* Layout DC: 2 columnas asimétricas */
+    .dc-grid {
+      display:grid;
+      grid-template-columns:1fr 1.45fr;
+      gap:.6rem;
+      align-items:start;
+    }
+    .dc-left { display:flex; flex-direction:column; gap:.6rem; }
   </style>
 
   <div class="rt-tabs">
     <button class="rt-btn rt-tn active" onclick="rTab2(this,'rt-archivos')">
       <span class="rt-dot"></span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:.7"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
-      Telconet
-      <span class="rt-count">4</span>
+      Telconet <span class="rt-count">4</span>
     </button>
-
     <button class="rt-btn rt-dc" onclick="rTab2(this,'rt-archivos1')">
       <span class="rt-dot"></span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:.7"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
-      Telconet Data Center
-      <span class="rt-count">4</span>
+      Telconet Data Center <span class="rt-count">4</span>
     </button>
-
     <button class="rt-btn rt-mg" onclick="rTab2(this,'rt-archivos2')">
       <span class="rt-dot"></span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:.7"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-      Megadatos
-      <span class="rt-count">4</span>
+      Megadatos <span class="rt-count">4</span>
     </button>
-
     <button class="rt-btn rt-sd" onclick="rTab2(this,'rt-archivos3')">
       <span class="rt-dot"></span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="opacity:.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Security Data
-      <span class="rt-count">4</span>
+      Security Data <span class="rt-count">1</span>
     </button>
   </div>
 
   <!-- TAB 1: Telconet -->
   <div id="rt-archivos" class="res-tab-panel active">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
-
       <div class="res-card">
         <div class="res-card-title">Instalación / Traslado</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA TELCONET</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA TRASLADO TELCONET</div>
         <div class="res-card-links">
-          <a class="res-link" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
-            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <a class="res-link" style="background:rgba(0,201,255,.1);color:#00c9ff;border:1px solid rgba(0,201,255,.25);" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
+            <svg viewBox="0 0 24 24" style="stroke:#00c9ff"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Formulario Instalación - Traslado TELCONET
           </a>
         </div>
       </div>
-
       <div class="res-card">
         <div class="res-card-title">Upgrade / Downgrade</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA UPGRADE TELCONET</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA DOWNGRADE TELCONET</div>
         <div class="res-card-links">
-          <a class="res-link" href="https://docs.google.com/spreadsheets/d/1DPnjaYvPafUivkDOWs8vym4P6B0xXAgo6eJVXXcpD7k/edit?gid=2020317306#gid=2020317306" target="_blank">
-            <svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <a class="res-link" style="background:rgba(0,201,255,.1);color:#00c9ff;border:1px solid rgba(0,201,255,.25);" href="https://docs.google.com/spreadsheets/d/1DPnjaYvPafUivkDOWs8vym4P6B0xXAgo6eJVXXcpD7k/edit?gid=2020317306#gid=2020317306" target="_blank">
+            <svg viewBox="0 0 24 24" style="stroke:#00c9ff"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Formulario Upgrade - Downgrade TELCONET
           </a>
         </div>
       </div>
-
       <div class="res-card">
         <div class="res-card-title">Cancelación</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA CANCELACION TELCONET</div>
         <div class="no-format">NO SE ADJUNTA FORMATO</div>
       </div>
-
       <div class="res-card">
         <div class="res-card-title">Cambio de Razón Social</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CAMBIO DE RAZON SOCIAL</div>
         <div class="no-format">NO SE ADJUNTA FORMATO</div>
       </div>
-
     </div>
   </div>
 
-  <!-- TAB 2: Telconet Data Center -->
+  <!-- TAB 2: Telconet Data Center — layout asimétrico -->
   <div id="rt-archivos1" class="res-tab-panel">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
+    <div class="dc-grid">
 
-      <div class="res-card">
-        <div class="res-card-title">Instalación</div>
-        <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE REQUERIMIENTOS DC - SERVICIO INTERNET DC</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE REQUERIMIENTOS DC - SERVICIO CONCENTRADOR DC</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE REQUERIMIENTOS DC - SERVICIO DATOS DC</div>
-        <div class="res-card-links">
-          <a class="res-link" style="background:rgba(56,189,248,.1);color:#38bdf8;border-color:rgba(56,189,248,.25);" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
-            <svg viewBox="0 0 24 24" style="stroke:#38bdf8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Formulario Instalación - Traslado
-          </a>
+      <!-- IZQUIERDA: 3 tarjetas apiladas -->
+      <div class="dc-left">
+
+        <div class="res-card">
+          <div class="res-card-title">Instalación</div>
+          <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
+          <div class="task-chips">
+            <div class="task-chip">SOLICITUD DE REQUERIMIENTOS DC - SERVICIO INTERNET DC</div>
+            <div class="task-chip">SOLICITUD DE REQUERIMIENTOS DC - SERVICIO CONCENTRADOR DC</div>
+            <div class="task-chip">SOLICITUD DE REQUERIMIENTOS DC - SERVICIO DATOS DC</div>
+          </div>
+          <div class="res-card-links">
+            <a class="res-link" style="background:rgba(56,189,248,.1);color:#38bdf8;border:1px solid rgba(56,189,248,.25);" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
+              <svg viewBox="0 0 24 24" style="stroke:#38bdf8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Formulario Instalación DC
+            </a>
+          </div>
         </div>
+
+        <div class="res-card">
+          <div class="res-card-title">Housing</div>
+          <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
+          <div class="task-chips">
+            <div class="task-chip">SOLICITUD DE HOUSING - CREACION DE HOUSING</div>
+          </div>
+          <div class="no-format">NO SE ADJUNTA FORMATO</div>
+        </div>
+
+        <div class="res-card">
+          <div class="res-card-title">NG Firewall</div>
+          <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
+          <div class="task-chips">
+            <div class="task-chip">SOLICITUD DE REQUERIMIENTOS DC - SERVICIO NG FIREWALL</div>
+          </div>
+          <div class="no-format">NO SE ADJUNTA FORMATO</div>
+        </div>
+
       </div>
 
-      <div class="res-card">
+      <!-- DERECHA: tarjeta grande VMs -->
+      <div class="res-card" style="height:fit-content;">
         <div class="res-card-title">Creación VMs / Upgrade / Downgrade / Replicación</div>
-        <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - CREACIÓN DE MAQUINA VIRTUAL</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE CPU</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE DE RAM</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE DISCO</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - REPLICACION ZERTO DRAAS</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - DOWNGRADE DE CPUT</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA UPGRADE TELCONET</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - DOWNGRADE DE DISK</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - DOWNGRADE DE RAM</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE STORAGE NFS</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINAS VIRTUALES - REGULARIZACION</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE MAQUINA FISICA - CREACION DE MAQUINA FISICA</div>
+        <div class="res-card-desc" style="margin-bottom:.5rem;"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
 
-        <div class="res-card-links">
-          <a class="res-link" style="background:rgba(56,189,248,.1);color:#38bdf8;border-color:rgba(56,189,248,.25);" href="https://docs.google.com/spreadsheets/d/1DPnjaYvPafUivkDOWs8vym4P6B0xXAgo6eJVXXcpD7k/edit?gid=2020317306#gid=2020317306" target="_blank">
+        <!-- Sub-sección: Creación -->
+        <div style="font-size:.7rem;font-weight:700;color:#38bdf8;letter-spacing:.05em;margin:.55rem 0 .3rem;">CREACIÓN</div>
+        <div class="task-chips">
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - CREACIÓN DE MAQUINA VIRTUAL</div>
+          <div class="task-chip">SOLICITUD DE MAQUINA FISICA - CREACION DE MAQUINA FISICA</div>
+        </div>
+
+        <!-- Sub-sección: Upgrade -->
+        <div style="font-size:.7rem;font-weight:700;color:#38bdf8;letter-spacing:.05em;margin:.55rem 0 .3rem;">UPGRADE</div>
+        <div class="task-chips">
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE CPU</div>
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE DE RAM</div>
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE DISCO</div>
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - UPGRADE STORAGE NFS</div>
+        </div>
+
+        <!-- Sub-sección: Downgrade -->
+        <div style="font-size:.7rem;font-weight:700;color:#38bdf8;letter-spacing:.05em;margin:.55rem 0 .3rem;">DOWNGRADE</div>
+        <div class="task-chips">
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - DOWNGRADE DE CPU</div>
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - DOWNGRADE DE RAM</div>
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - DOWNGRADE DE DISK</div>
+        </div>
+
+        <!-- Sub-sección: Otros -->
+        <div style="font-size:.7rem;font-weight:700;color:#38bdf8;letter-spacing:.05em;margin:.55rem 0 .3rem;">REPLICACIÓN / REGULARIZACIÓN</div>
+        <div class="task-chips">
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - REPLICACION ZERTO DRAAS</div>
+          <div class="task-chip">SOLICITUD DE MAQUINAS VIRTUALES - REGULARIZACION</div>
+        </div>
+
+        <div class="res-card-links" style="margin-top:.75rem;">
+          <a class="res-link" style="background:rgba(56,189,248,.1);color:#38bdf8;border:1px solid rgba(56,189,248,.25);" href="https://docs.google.com/spreadsheets/d/1DPnjaYvPafUivkDOWs8vym4P6B0xXAgo6eJVXXcpD7k/edit?gid=2020317306#gid=2020317306" target="_blank">
             <svg viewBox="0 0 24 24" style="stroke:#38bdf8"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Formulario Upgrade - Downgrade 
+            Formulario VMs - Upgrade / Downgrade
           </a>
         </div>
-      </div>
-
-      <div class="res-card">
-        <div class="res-card-title">Housing</div>
-        <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE HOUSING - CREACION DE HOUSING</div>
-        <div class="no-format">NO SE ADJUNTA FORMATO</div>
-      </div>
-
-      <div class="res-card">
-        <div class="res-card-title">NG Firewall</div>
-        <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL - DATA CENTER</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE REQUERIMIENTOS DC - SERVICIO NG FIREWALL</div>
-        <div class="no-format">NO SE ADJUNTA FORMATO</div>
       </div>
 
     </div>
@@ -1715,81 +1723,62 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
   <!-- TAB 3: Megadatos -->
   <div id="rt-archivos2" class="res-tab-panel">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
-
       <div class="res-card">
         <div class="res-card-title">Instalación / Traslado</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CORTESIA MEGADATOS</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CORTESIA TRASLADO MEGADATOS</div>
         <div class="res-card-links">
-          <a class="res-link" style="background:rgba(255,153,0,.1);color:#ff9900;border-color:rgba(255,153,0,.25);" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
+          <a class="res-link" style="background:rgba(255,153,0,.1);color:#ff9900;border:1px solid rgba(255,153,0,.25);" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
             <svg viewBox="0 0 24 24" style="stroke:#ff9900"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Formulario Instalación - Traslado MEGADATOS 
+            Formulario Instalación - Traslado MEGADATOS
           </a>
         </div>
       </div>
-
       <div class="res-card">
         <div class="res-card-title">Upgrade / Downgrade</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CORTESIA UPGRADE MEGADATOS</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CORTESIA DOWNGRADE MEGADATOS</div>
         <div class="res-card-links">
-          <a class="res-link" style="background:rgba(255,153,0,.1);color:#ff9900;border-color:rgba(255,153,0,.25);" href="https://docs.google.com/spreadsheets/d/1DPnjaYvPafUivkDOWs8vym4P6B0xXAgo6eJVXXcpD7k/edit?gid=2020317306#gid=2020317306" target="_blank">
+          <a class="res-link" style="background:rgba(255,153,0,.1);color:#ff9900;border:1px solid rgba(255,153,0,.25);" href="https://docs.google.com/spreadsheets/d/1DPnjaYvPafUivkDOWs8vym4P6B0xXAgo6eJVXXcpD7k/edit?gid=2020317306#gid=2020317306" target="_blank">
             <svg viewBox="0 0 24 24" style="stroke:#ff9900"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Formulario Upgrade - Downgrade MEGADATOS
           </a>
         </div>
       </div>
-
       <div class="res-card">
         <div class="res-card-title">Cancelación</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CORTESIA CANCELACION MEGADATOS</div>
         <div class="no-format">NO SE ADJUNTA FORMATO</div>
       </div>
-
       <div class="res-card">
         <div class="res-card-title">Cambio de Razón Social</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CAMBIO DE RAZON SOCIAL</div>
         <div class="no-format">NO SE ADJUNTA FORMATO</div>
       </div>
-
     </div>
   </div>
 
   <!-- TAB 4: Security Data -->
   <div id="rt-archivos3" class="res-tab-panel">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
-
       <div class="res-card">
-        <div class="res-card-title">Firma Eelectrónica</div>
+        <div class="res-card-title">Firma Electrónica</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD DE FIRMA ELECTRONICA</div>
-        <div class="res-card-desc"><b>TAREA:</b> sOLICITUD DE RENOVACION FIRMA ELECTRONICA</div>
+        <div class="task-chips" style="--dot-color:#00e576;">
+          <div class="task-chip" style="--dot-color:#00e576;">SOLICITUD DE FIRMA ELECTRONICA</div>
+          <div class="task-chip" style="--dot-color:#00e576;">SOLICITUD DE RENOVACION FIRMA ELECTRONICA</div>
+        </div>
         <div class="res-card-links">
-          <a class="res-link" style="background:rgba(0,229,118,.1);color:#00e576;border-color:rgba(0,229,118,.25);" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
+          <a class="res-link" style="background:rgba(0,229,118,.1);color:#00e576;border:1px solid rgba(0,229,118,.25);" href="https://docs.google.com/spreadsheets/d/1D8bb19l2JPa7BrFA9SXUsywpYCCb-I6DcqjRwE733xc/edit?gid=1300579757#gid=1300579757" target="_blank">
             <svg viewBox="0 0 24 24" style="stroke:#00e576"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Requisitos Firma Electrónica
           </a>
         </div>
       </div>
-
-      <div class="res-card">
-        <div class="res-card-title">Upgrade / Downgrade</div>
-        <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA UPGRADE TELCONET</div>
-        <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA DOWNGRADE TELCONET</div>
-        <div class="res-card-links">
-          <a class="res-link" style="background:rgba(0,229,118,.1);color:#00e576;border-color:rgba(0,229,118,.25);" href="https://docs.google.com/spreadsheets/d/1DPnjaYvPafUivkDOWs8vym4P6B0xXAgo6eJVXXcpD7k/edit?gid=2020317306#gid=2020317306" target="_blank">
-            <svg viewBox="0 0 24 24" style="stroke:#00e576"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Formulario Upgrade - Downgrade
-          </a>
-        </div>
-      </div>
-
-
     </div>
   </div>
 
@@ -1804,6 +1793,7 @@ function rTab2(btn, panelId) {
 }
 </script>
 </section>
+
 
 
 
