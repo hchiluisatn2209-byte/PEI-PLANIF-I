@@ -1108,84 +1108,247 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 
 
 <section class="slide theme-navy" data-index="5" id="slide-5">
-    <div class="slide-pad">
+  <div class="slide-pad">
+    <div class="badge"><span class="badge-num">05</span> Tipos de Solicitudes</div>
+    <p style="margin:1rem 0 1.5rem;font-size:1.1rem;font-weight:500;color:#dce8ff;">
+      Se gestionan los ingresos de acuerdo a los requerimientos de los Dptos. Solicitantes:
+    </p>
 
-        <div class="badge">
-            <span class="badge-num">05</span>
-            Tipos de Solicitudes
+    <style>
+      .ts-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+      .ts-card {
+        background:rgba(255,255,255,.05);
+        border:1.5px solid rgba(255,255,255,.1);
+        border-radius:14px;
+        overflow:hidden;
+        cursor:pointer;
+        transition:border-color .18s, background .18s;
+      }
+      .ts-card:hover { background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22); }
+      .ts-card.ts-active { border-color:#00c9ff; background:rgba(0,201,255,.07); }
+      .ts-card-header {
+        padding:.75rem 1rem;
+        display:flex;
+        align-items:center;
+        gap:.6rem;
+        border-bottom:1px solid rgba(255,255,255,.08);
+      }
+      .ts-icon { font-size:20px; }
+      .ts-tag {
+        font-size:.68rem;
+        font-weight:700;
+        letter-spacing:.07em;
+        padding:.25rem .65rem;
+        border-radius:6px;
+      }
+      .ts-tag-teal  { background:#0F6E5622; color:#3de8b0; }
+      .ts-tag-purple{ background:#534AB722; color:#b0a8ff; }
+      .ts-tag-coral { background:#993C1D22; color:#ffaa88; }
+      .ts-count {
+        margin-left:auto;
+        font-size:.72rem;
+        font-weight:600;
+        color:#8ab4d4;
+        background:rgba(255,255,255,.07);
+        border:1px solid rgba(255,255,255,.1);
+        border-radius:20px;
+        padding:.15rem .55rem;
+      }
+      .ts-body { padding:.4rem 0 .6rem; }
+      .ts-item {
+        display:flex;
+        align-items:center;
+        gap:.6rem;
+        padding:.42rem 1rem;
+        font-size:.875rem;
+        color:#c8dff5;
+        border-radius:8px;
+        margin:0 .4rem;
+        transition:background .12s, color .12s;
+      }
+      .ts-item:hover { background:rgba(255,255,255,.07); color:#fff; }
+      .ts-item svg { width:15px; height:15px; flex-shrink:0; opacity:.55; }
+      .ts-detail {
+        display:none;
+        margin-top:1rem;
+        background:rgba(0,201,255,.06);
+        border:1px solid rgba(0,201,255,.25);
+        border-radius:12px;
+        padding:.9rem 1.1rem;
+      }
+      .ts-detail.ts-show { display:block; }
+      .ts-detail-title {
+        font-size:.78rem;
+        font-weight:600;
+        color:#00c9ff;
+        margin-bottom:.55rem;
+        display:flex;
+        align-items:center;
+        gap:.4rem;
+      }
+      .ts-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
+      .ts-chip {
+        font-size:.72rem;
+        background:rgba(255,255,255,.07);
+        border:1px solid rgba(255,255,255,.12);
+        border-radius:20px;
+        padding:.28rem .7rem;
+        color:#9bbedd;
+      }
+    </style>
+
+    <div class="ts-grid">
+
+      <!-- TELCONET -->
+      <div class="ts-card ts-active" id="ts-card-tn" onclick="tsSelect('tn')">
+        <div class="ts-card-header">
+          <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#3de8b0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.9 19.1C1 15.2 1 8.8 4.9 4.9"/><path d="M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5"/><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5"/><path d="M19.1 4.9C23 8.8 23 15.2 19.1 19.1"/></svg>
+          <span class="ts-tag ts-tag-teal">TELCONET</span>
+          <span class="ts-count">7</span>
         </div>
-
-        <p style="
-            margin:1rem 0 2rem 0;
-            font-size:1.15rem;
-            font-weight:500;
-            color:#dce8ff;
-        ">
-            Se gestionan los ingresos de acuerdo a los requerimientos de los Dptos. Solicitantes:
-        </p>
-
-        <div style="
-            display:grid;
-            grid-template-columns:repeat(3,1fr);
-            gap:1.5rem;
-            align-items:stretch;
-        ">
-
-            <!-- TELCONET -->
-            <div class="task-card">
-                <span class="task-proc-tag">TELCONET</span>
-
-                <ul style="
-                    margin-top:1rem;
-                    line-height:1.8;
-                    padding-left:1.2rem;
-                ">
-                    <li>Instalación</li>
-                    <li>Reubicación</li>
-                    <li>Traslado</li>
-                    <li>Upgrade</li>
-                    <li>Downgrade</li>
-                    <li>Cancelación</li>
-                    <li>Cambio de Razón Social</li>
-                </ul>
-            </div>
-
-            <!-- MEGADATOS -->
-            <div class="task-card">
-                <span class="task-proc-tag">MEGADATOS</span>
-
-                <ul style="
-                    margin-top:1rem;
-                    line-height:1.8;
-                    padding-left:1.2rem;
-                ">
-                    <li>Instalación</li>
-                    <li>Reubicación</li>
-                    <li>Traslado</li>
-                    <li>Upgrade</li>
-                    <li>Downgrade</li>
-                    <li>Cancelación</li>
-                    <li>Cambio de Razón Social</li>
-                </ul>
-            </div>
-
-            <!-- SECURITY DATA -->
-            <div class="task-card">
-                <span class="task-proc-tag">SECURITY DATA</span>
-
-                <ul style="
-                    margin-top:1rem;
-                    line-height:1.8;
-                    padding-left:1.2rem;
-                ">
-                    <li>Solicitud FE</li>
-                    <li>Renovación FE</li>
-                </ul>
-            </div>
-
+        <div class="ts-body">
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-7"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+            Instalación
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10H3"/><path d="m3 6 9-4 9 4"/><path d="M3 14h18"/><path d="m3 18 9 4 9-4"/></svg>
+            Reubicación
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Traslado
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+            Upgrade
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="7 6 12 11 17 6"/><polyline points="7 13 12 18 17 13"/></svg>
+            Downgrade
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            Cancelación
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Cambio de Razón Social
+          </div>
         </div>
+      </div>
+
+      <!-- MEGADATOS -->
+      <div class="ts-card" id="ts-card-mg" onclick="tsSelect('mg')">
+        <div class="ts-card-header">
+          <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#b0a8ff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <span class="ts-tag ts-tag-purple">MEGADATOS</span>
+          <span class="ts-count">7</span>
+        </div>
+        <div class="ts-body">
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22v-7"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/><circle cx="12" cy="5" r="3"/></svg>
+            Instalación
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10H3"/><path d="m3 6 9-4 9 4"/><path d="M3 14h18"/><path d="m3 18 9 4 9-4"/></svg>
+            Reubicación
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            Traslado
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="17 11 12 6 7 11"/><polyline points="17 18 12 13 7 18"/></svg>
+            Upgrade
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="7 6 12 11 17 6"/><polyline points="7 13 12 18 17 13"/></svg>
+            Downgrade
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            Cancelación
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            Cambio de Razón Social
+          </div>
+        </div>
+      </div>
+
+      <!-- SECURITY DATA -->
+      <div class="ts-card" id="ts-card-sd" onclick="tsSelect('sd')">
+        <div class="ts-card-header">
+          <svg class="ts-icon" viewBox="0 0 24 24" fill="none" stroke="#ffaa88" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <span class="ts-tag ts-tag-coral">SECURITY DATA</span>
+          <span class="ts-count">2</span>
+        </div>
+        <div class="ts-body">
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Solicitud FE
+          </div>
+          <div class="ts-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+            Renovación FE
+          </div>
+        </div>
+      </div>
 
     </div>
+
+    <!-- PANELES DE DETALLE -->
+    <div class="ts-detail ts-show" id="ts-detail-tn">
+      <div class="ts-detail-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        TELCONET — Proceso activo
+      </div>
+      <div class="ts-chips">
+        <span class="ts-chip">PROCESO: TAREAS DE PEI - GESTIÓN COMERCIAL</span>
+        <span class="ts-chip">7 tipos de solicitud</span>
+        <span class="ts-chip">Formulario disponible: Instalación / Traslado</span>
+        <span class="ts-chip">Formulario disponible: Upgrade / Downgrade</span>
+        <span class="ts-chip">Cancelación y Cambio Razón Social: sin formato</span>
+      </div>
+    </div>
+    <div class="ts-detail" id="ts-detail-mg">
+      <div class="ts-detail-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        MEGADATOS — Proceso activo
+      </div>
+      <div class="ts-chips">
+        <span class="ts-chip">PROCESO: TAREAS DE PEI - GESTIÓN COMERCIAL</span>
+        <span class="ts-chip">7 tipos de solicitud</span>
+        <span class="ts-chip">Mismas categorías que Telconet</span>
+        <span class="ts-chip">Cancelación y Cambio Razón Social: sin formato</span>
+      </div>
+    </div>
+    <div class="ts-detail" id="ts-detail-sd">
+      <div class="ts-detail-title">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        SECURITY DATA — Proceso activo
+      </div>
+      <div class="ts-chips">
+        <span class="ts-chip">2 tipos de solicitud</span>
+        <span class="ts-chip">Solicitud FE</span>
+        <span class="ts-chip">Renovación FE</span>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function tsSelect(id) {
+      ['tn','mg','sd'].forEach(function(k) {
+        document.getElementById('ts-card-'+k).classList.remove('ts-active');
+        var d = document.getElementById('ts-detail-'+k);
+        d.classList.remove('ts-show');
+      });
+      document.getElementById('ts-card-'+id).classList.add('ts-active');
+      document.getElementById('ts-detail-'+id).classList.add('ts-show');
+    }
+  </script>
 </section>
 
 
