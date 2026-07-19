@@ -1348,180 +1348,146 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 </section>
 
 
-
 <section class="slide theme-navy" data-index="6" id="slide-6">
-    <div class="slide-pad">
+  <div class="slide-pad">
 
-        <div class="badge">
-            <span class="badge-num">03</span>
-           Proceso Solicitudes
-        </div>
+    <div class="badge"><span class="badge-num">03</span> Proceso Solicitudes</div>
+    <h2 class="title-xl" style="margin-bottom:.8rem;">Flujo de Gestión de Cortesías</h2>
+    <p style="margin-bottom:1.8rem;color:#d7e8ff;line-height:1.6;font-size:1.05rem;">
+      Para gestionar una cortesía se debe generar una <b>tarea asignada a PEI</b>,
+      con el proceso respectivo de acuerdo al producto solicitado.
+    </p>
 
-        <h2 class="title-xl" style="margin-bottom:1rem;">
-            Flujo de Gestión de Cortesías
-        </h2>
+    <style>
+      .fg-steps { display:grid; grid-template-columns:1fr 50px 1fr 50px 1fr; align-items:start; gap:0; margin-bottom:1.2rem; }
+      .fg-step { cursor:pointer; }
+      .fg-num {
+        width:24px; height:24px; border-radius:50%;
+        background:rgba(255,255,255,.12); font-size:.72rem; font-weight:700;
+        color:#8ab4d4; display:flex; align-items:center; justify-content:center;
+        margin:0 auto .5rem; transition:background .2s, color .2s;
+      }
+      .fg-step.fg-active .fg-num { background:#00c9ff; color:#03142b; }
+      .fg-circle {
+        width:120px; height:120px; border-radius:50%; margin:0 auto 1rem;
+        display:flex; align-items:center; justify-content:center;
+        text-align:center; font-size:.85rem; font-weight:500; line-height:1.35;
+        border:2px solid rgba(255,255,255,.15);
+        background:rgba(91,155,230,.18); color:#c8dff5;
+        transition:border-color .2s, background .2s, transform .2s;
+      }
+      .fg-step.fg-active .fg-circle {
+        border-color:#00c9ff; background:rgba(0,201,255,.15);
+        color:#fff; transform:scale(1.06);
+      }
+      .fg-step-label { text-align:center; font-size:.78rem; font-weight:500; color:#8ab4d4; transition:color .2s; }
+      .fg-step.fg-active .fg-step-label { color:#00c9ff; }
+      .fg-arrow { display:flex; align-items:center; justify-content:center; padding-top:60px; }
+      .fg-arrow svg { width:30px; height:30px; opacity:.35; }
+      .fg-detail {
+        background:rgba(0,201,255,.06); border:1px solid rgba(0,201,255,.22);
+        border-radius:14px; padding:1rem 1.25rem; min-height:90px;
+        transition:opacity .25s;
+      }
+      .fg-detail-title { font-size:.8rem; font-weight:600; color:#00c9ff; margin-bottom:.65rem; display:flex; align-items:center; gap:.4rem; }
+      .fg-ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.45rem; }
+      .fg-ul li { display:flex; align-items:flex-start; gap:.55rem; font-size:.9rem; color:#c8dff5; line-height:1.5; }
+      .fg-ul li::before { content:''; width:6px; height:6px; border-radius:50%; background:#00c9ff; flex-shrink:0; margin-top:.45rem; opacity:.7; }
+      .fg-footer { margin-top:1rem; text-align:center; font-size:.78rem; color:#5a7a9a; }
+      .fg-footer b { color:#8ab4d4; font-weight:600; }
+    </style>
 
-        <p style="
-            margin-bottom:2rem;
-            color:#d7e8ff;
-            line-height:1.6;
-            font-size:1.05rem;
-        ">
-            Para gestionar una cortesía se debe generar una
-            <b>tarea asignada a PEI</b>, con el proceso respectivo
-            de acuerdo al producto solicitado.
-        </p>
+    <div class="fg-steps">
 
-        <div style="
-            display:grid;
-            grid-template-columns:1fr 80px 1fr 80px 1fr;
-            gap:1rem;
-            align-items:center;
-        ">
+      <div class="fg-step fg-active" id="fg-s1" onclick="fgSelect(1)">
+        <div class="fg-num">1</div>
+        <div class="fg-circle">Departamento<br>Solicitante</div>
+        <div class="fg-step-label">Solicitud</div>
+      </div>
 
-            <!-- PASO 1 -->
-            <div>
+      <div class="fg-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8ebcff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="13 6 19 12 13 18"/>
+        </svg>
+      </div>
 
-                <div style="
-                    width:180px;
-                    height:180px;
-                    margin:0 auto 1rem;
-                    border-radius:50%;
-                    background:linear-gradient(135deg,#5b9be6,#3b74c5);
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    text-align:center;
-                    color:white;
-                    font-weight:700;
-                    font-size:1.2rem;
-                    box-shadow:0 12px 25px rgba(0,0,0,.25);
-                ">
-                    Departamento<br>
-                    Solicitante
-                </div>
+      <div class="fg-step" id="fg-s2" onclick="fgSelect(2)">
+        <div class="fg-num">2</div>
+        <div class="fg-circle">PEI<br>Validación<br>e Ingreso</div>
+        <div class="fg-step-label">Validación</div>
+      </div>
 
-                <div style="
-                    background:rgba(91,155,230,.18);
-                    border:1px solid rgba(255,255,255,.15);
-                    border-radius:18px;
-                    padding:1rem;
-                ">
-                    <ul style="line-height:1.6;">
-                        <li>Genera la tarea</li>
-                        <li>Adjunta el formulario con toda la información</li>
-                        <li>Adjunta la autorización requerida</li>
-                    </ul>
-                </div>
+      <div class="fg-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#8ebcff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"/>
+          <polyline points="13 6 19 12 13 18"/>
+        </svg>
+      </div>
 
-            </div>
-
-            <!-- FLECHA -->
-            <div style="
-                text-align:center;
-                font-size:3rem;
-                color:#8ebcff;
-                font-weight:bold;
-            ">
-                ➜
-            </div>
-
-            <!-- PASO 2 -->
-            <div>
-
-                <div style="
-                    width:180px;
-                    height:180px;
-                    margin:0 auto 1rem;
-                    border-radius:50%;
-                    background:linear-gradient(135deg,#5b9be6,#3b74c5);
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    text-align:center;
-                    color:white;
-                    font-weight:700;
-                    font-size:1.2rem;
-                    box-shadow:0 12px 25px rgba(0,0,0,.25);
-                ">
-                    PEI<br>
-                    Validación e Ingreso
-                </div>
-
-                <div style="
-                    background:rgba(91,155,230,.18);
-                    border:1px solid rgba(255,255,255,.15);
-                    border-radius:18px;
-                    padding:1rem;
-                ">
-                    <ul style="line-height:1.6;">
-                        <li>Valida adjuntos</li>
-                        <li>Revisa la información del formulario</li>
-                        <li>Realiza el ingreso del producto correspondiente en TELCOS</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <!-- FLECHA -->
-            <div style="
-                text-align:center;
-                font-size:3rem;
-                color:#8ebcff;
-                font-weight:bold;
-            ">
-                ➜
-            </div>
-
-            <!-- PASO 3 -->
-            <div>
-
-                <div style="
-                    width:180px;
-                    height:180px;
-                    margin:0 auto 1rem;
-                    border-radius:50%;
-                    background:linear-gradient(135deg,#5b9be6,#3b74c5);
-                    display:flex;
-                    align-items:center;
-                    justify-content:center;
-                    text-align:center;
-                    color:white;
-                    font-weight:700;
-                    font-size:1.2rem;
-                    box-shadow:0 12px 25px rgba(0,0,0,.25);
-                ">
-                    PEI<br>
-                    Implementación
-                </div>
-
-                <div style="
-                    background:rgba(91,155,230,.18);
-                    border:1px solid rgba(255,255,255,.15);
-                    border-radius:18px;
-                    padding:1rem;
-                ">
-                    <ul style="line-height:1.6;">
-                        <li>Coordina la implementación con el área correspondiente</li>
-                        <li>Realiza seguimiento hasta la activación</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="task-meta" style="
-            margin-top:2rem;
-            justify-content:center;
-        ">
-            <span>
-                <b>Proceso:</b> Tareas de PEI - Gestión Comercial
-            </span>
-        </div>
+      <div class="fg-step" id="fg-s3" onclick="fgSelect(3)">
+        <div class="fg-num">3</div>
+        <div class="fg-circle">PEI<br>Implementación</div>
+        <div class="fg-step-label">Ejecución</div>
+      </div>
 
     </div>
+
+    <div class="fg-detail" id="fg-detail">
+      <div class="fg-detail-title" id="fg-dtitle"></div>
+      <ul class="fg-ul" id="fg-dlist"></ul>
+    </div>
+
+    <div class="fg-footer"><b>Proceso:</b> Tareas de PEI — Gestión Comercial</div>
+
+  </div>
+
+  <script>
+    var fgData = {
+      1: {
+        title: 'Departamento Solicitante — genera la tarea',
+        items: [
+          'Genera la tarea asignada a PEI',
+          'Adjunta el formulario con toda la información requerida',
+          'Adjunta la autorización correspondiente al proceso'
+        ]
+      },
+      2: {
+        title: 'PEI — Validación e Ingreso en TELCOS',
+        items: [
+          'Valida los adjuntos recibidos en la tarea',
+          'Revisa la información del formulario',
+          'Realiza el ingreso del producto correspondiente en TELCOS'
+        ]
+      },
+      3: {
+        title: 'PEI — Coordinación e Implementación',
+        items: [
+          'Coordina la implementación con el área correspondiente',
+          'Realiza seguimiento hasta la activación del servicio'
+        ]
+      }
+    };
+
+    function fgSelect(n) {
+      [1,2,3].forEach(function(k) {
+        document.getElementById('fg-s'+k).classList.remove('fg-active');
+      });
+      document.getElementById('fg-s'+n).classList.add('fg-active');
+      var d = fgData[n];
+      document.getElementById('fg-dtitle').textContent = d.title;
+      var ul = document.getElementById('fg-dlist');
+      ul.innerHTML = d.items.map(function(t){ return '<li>'+t+'</li>'; }).join('');
+      var det = document.getElementById('fg-detail');
+      det.style.opacity = '0';
+      setTimeout(function(){ det.style.opacity = '1'; }, 30);
+    }
+
+    fgSelect(1);
+  </script>
 </section>
+
+
 
 
 <section class="slide theme-navy" data-index="7" id="slide-7">
