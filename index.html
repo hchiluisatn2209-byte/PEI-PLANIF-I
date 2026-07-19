@@ -1813,7 +1813,136 @@ function rTab2(btn, panelId) {
 
 
 
+<section class="slide theme-navy" data-index="8" id="slide-8">
+<div class="slide-pad" style="padding-top:calc(36px + .9rem);">
+  <div class="badge"><span class="badge-num">08</span> Gestión de Login</div>
+  <h2 class="title-xl" style="margin-bottom:.6rem;">Creación de Login — Megadatos</h2>
+  <p style="color:#d7e8ff;font-size:1rem;margin-bottom:1.4rem;line-height:1.6;">
+    El ingreso debe realizarse respetando la <b>nomenclatura establecida</b>,
+    para garantizar su correcta identificación y control.
+  </p>
 
+  <style>
+    .mg-grid { display:grid; grid-template-columns:1fr 1fr; gap:.7rem; margin-bottom:1rem; }
+    .mg-card {
+      border-radius:12px; padding:1rem 1.1rem;
+      border:1.5px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+    }
+    .mg-tag {
+      display:inline-block; font-size:.68rem; font-weight:600;
+      padding:.2rem .6rem; border-radius:6px; margin-bottom:.6rem;
+      letter-spacing:.05em;
+    }
+    .mg-tag-pub  { background:rgba(255,153,0,.12); color:#ff9900; border:1px solid rgba(255,153,0,.3); }
+    .mg-tag-priv { background:rgba(0,201,255,.12); color:#00c9ff; border:1px solid rgba(0,201,255,.3); }
+    .mg-card-label { font-size:.82rem; font-weight:600; color:#e0eeff; margin-bottom:.35rem; }
+    .mg-formula {
+      font-family:monospace; font-size:.86rem; color:#7a9cbf;
+      background:rgba(0,0,0,.2); border-radius:6px; padding:.38rem .7rem;
+      border:0.5px solid rgba(255,255,255,.1);
+      display:flex; flex-wrap:wrap; gap:.18rem; align-items:center;
+    }
+    .mg-seg-pub  { color:#ff9900; font-weight:700; }
+    .mg-seg-priv { color:#00c9ff; font-weight:700; }
+    .mg-seg-sep  { color:rgba(255,255,255,.25); }
+    .mg-seg      { color:#8ab4d4; }
+    .mg-example {
+      font-size:.75rem; color:#5a7a9a; margin-top:.5rem;
+      font-family:monospace; display:flex; align-items:center; gap:.35rem;
+    }
+    .mg-example span { color:#c8dff5; font-weight:500; }
+
+    .mg-mockup {
+      background:rgba(255,255,255,.04); border:0.5px solid rgba(255,255,255,.12);
+      border-radius:10px; padding:.75rem 1rem;
+    }
+    .mg-mockup-tabs { display:flex; border-bottom:1px solid rgba(255,255,255,.1); margin-bottom:.7rem; }
+    .mg-mtab { font-size:.72rem; padding:.32rem .75rem; color:#5a7a9a; border-bottom:2px solid transparent; }
+    .mg-mtab.active { color:#ff9900; border-color:#ff9900; }
+    .mg-mfield { display:flex; align-items:center; gap:.75rem; }
+    .mg-mfield label { font-size:.75rem; color:#5a7a9a; min-width:50px; text-align:right; white-space:nowrap; }
+    .mg-mfield-val {
+      flex:1; font-family:monospace; font-size:.82rem;
+      background:rgba(0,0,0,.2); border:0.5px solid rgba(255,255,255,.12);
+      border-radius:5px; padding:.32rem .65rem; color:#c8dff5;
+    }
+    .mg-alert {
+      display:flex; align-items:flex-start; gap:.75rem;
+      background:rgba(255,193,7,.07); border:1.5px solid rgba(255,193,7,.35);
+      border-radius:12px; padding:1rem 1.1rem;
+    }
+    .mg-alert-icon {
+      width:32px; height:32px; border-radius:50%; flex-shrink:0;
+      background:rgba(255,193,7,.15); border:1.5px solid rgba(255,193,7,.4);
+      display:flex; align-items:center; justify-content:center;
+    }
+    .mg-alert-icon svg { width:16px; height:16px; stroke:#ffc107; }
+    .mg-alert-body { flex:1; }
+    .mg-alert-title { font-size:.8rem; font-weight:700; color:#ffc107; margin-bottom:.35rem; letter-spacing:.03em; }
+    .mg-alert-fields { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem; }
+    .mg-alert-chip {
+      font-size:.75rem; font-weight:500;
+      background:rgba(255,193,7,.1); color:#ffd54f;
+      border:1px solid rgba(255,193,7,.25); border-radius:6px;
+      padding:.25rem .65rem;
+    }
+  </style>
+
+  <div class="mg-grid">
+
+    <div class="mg-card">
+      <span class="mg-tag mg-tag-pub">Empresas Públicas</span>
+      <div class="mg-card-label">Nomenclatura</div>
+      <div class="mg-formula">
+        <span class="mg-seg-pub">mg</span><span class="mg-seg-sep">-</span>
+        <span class="mg-seg-pub">pub</span><span class="mg-seg-sep">-</span>
+        <span class="mg-seg">ciudad</span><span class="mg-seg-sep">-</span>
+        <span class="mg-seg">entidad</span>
+      </div>
+      <div class="mg-example">
+        &#8594; Ejm: <span>mg-pub-gye-contraloria</span>
+      </div>
+    </div>
+
+    <div class="mg-card">
+      <span class="mg-tag mg-tag-priv">Empresas Privadas</span>
+      <div class="mg-card-label">Nomenclatura</div>
+      <div class="mg-formula">
+        <span class="mg-seg-priv">mg</span><span class="mg-seg-sep">-</span>
+        <span class="mg-seg-priv">priv</span><span class="mg-seg-sep">-</span>
+        <span class="mg-seg">ciudad</span><span class="mg-seg-sep">-</span>
+        <span class="mg-seg">cliente</span>
+      </div>
+      <div class="mg-example">
+        &#8594; Ejm: <span>mg-priv-uio-juaneljury</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="mg-alert">
+    <div class="mg-alert-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+    </div>
+    <div class="mg-alert-body">
+      <div class="mg-alert-title">Campo obligatorio adicional</div>
+      <div style="font-size:.85rem;color:#d7e8ff;line-height:1.55;">
+        Es necesario complementar el registro con el campo que permitirá el control de los ingresos:
+      </div>
+      <div class="mg-alert-fields">
+        <span class="mg-alert-chip">Nombre del Punto</span>
+        <span class="mg-alert-chip">Observación</span>
+        <span class="mg-alert-chip">Descripción de la Factura</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
 
 
 <section class="slide theme-navy" data-index="33" id="slide-33">
