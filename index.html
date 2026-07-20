@@ -1818,7 +1818,7 @@ function rTab2(btn, panelId) {
 <section class="slide theme-navy" data-index="8" id="slide-8">
 <div class="slide-pad" style="padding-top:calc(36px + .9rem);">
   <div class="badge"><span class="badge-num">05</span> Creación Login</div>
-  <h2 class="title-xl" style="margin-bottom:.6rem;">Creación de Login — Megadatos</h2>
+  <h2 class="title-xl" style="margin-bottom:.6rem;">Creación de Login</h2>
   <p style="color:#d7e8ff;font-size:1rem;margin-bottom:1.4rem;line-height:1.6;">
     El ingreso debe realizarse respetando la <b>nomenclatura establecida</b>,
     para garantizar su correcta identificación y control.
@@ -1949,10 +1949,10 @@ function rTab2(btn, panelId) {
 
 <section class="slide theme-navy" data-index="9" id="slide-9">
 <div class="slide-pad" style="padding-top:calc(36px + .9rem);">
-  <div class="badge"><span class="badge-num">0X</span> Categorías de Productos</div>
-  <h2 class="title-xl" style="margin-bottom:.6rem;">Catálogo de Productos</h2>
+  <div class="badge"><span class="badge-num">06</span> Registro Ordenes de Trabajo</div>
+  <h2 class="title-xl" style="margin-bottom:.6rem;">Prodcutos Telconet</h2>
   <p style="color:#d7e8ff;font-size:1rem;margin-bottom:1.2rem;line-height:1.6;">
-    Selecciona una categoría para ver los productos disponibles:
+    Se realiza el registro de algunos del catálogo de proudctos Telconet:
   </p>
 
   <style>
@@ -2077,37 +2077,37 @@ function rTab2(btn, panelId) {
       conn: {
         label: 'Connectivity',
         icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>',
-        items: ['Internet Dedicado','Small Business','Internet Inalámbrico','Fibra Óptica GPON','Redbusiness','Punto a Punto Radio','Banda Ancha Móvil','Servicios SD-WAN']
+        items: ['Internet Dedicado','Concentrador L3MPLS','L3MPLS','INTERNET WIFI','TelcoHome','OTROS']
       },
       cloud: {
         label: 'Cloud',
         icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>',
-        items: ['Máquinas Virtuales','Almacenamiento Cloud','Housing DC','Colocation','Backup en la Nube','NG Firewall']
+        items: ['Internet DC','DATOS DC','HOUSING Alquiler de Espacio Físico','HOUSING INSTALACION ENERGIA','DOMINIO','CLOUD','OTROS']
       },
       sec: {
         label: 'Security',
         icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
-        items: ['Firewall Gestionado','DDoS Protection','VPN Corporativa','WAF','SOC Gestionado']
+        items: ['SECURITY CLOUD NG FIREWALL','SECURITY NG FIREWALL','EMAIL PROTECTION','OTROS']
       },
       seg: {
         label: 'SEG Electronica',
         icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h4"/></svg>',
-        items: ['Firma Electrónica','Renovación FE']
+        items: ['MANTENIMIENTO CORRECTIVO CCTV','MANTENIMIENTO PREVENTIVO','SAFE CAM','SEGURIDAD ELECTRONICA VIDEO VIGILANCIA', 'CAMARA IP', 'SEGURIDAD ELECTRONICA ALARMAS',  'OTROS']
       },
       net: {
         label: 'Network',
         icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-5.5 6M12 11l5.5 6"/></svg>',
-        items: ['MPLS','VPLS','Carrier Ethernet','SD-WAN Gestionado']
+        items: ['Cableado Estructurado','FIBER LAN EXTENSION','WIFI Alquiler Equipos','Networking LAN','OTROS']
       },
       col: {
         label: 'Collaboration',
         icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
-        items: ['Telefonía IP','Videoconferencia','Microsoft Teams Direct Routing']
+        items: ['COU TELEFONIA IP','COU LINEAS TELEFONIA FIJA','COU VIDEO ANALYTICS','OTROS' ]
       },
       tra: {
         label: 'Transit',
         icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>',
-        items: ['Tránsito IP Internacional','Peering Nacional','BGP Multihoming']
+        items: ['MOBILE BUS']
       },
 
     };
