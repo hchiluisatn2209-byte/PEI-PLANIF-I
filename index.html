@@ -1304,7 +1304,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
     <div class="ts-detail ts-show" id="ts-detail-tn">
       <div class="ts-detail-title">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        PEI - TERCERIZADOS
+        NOTA:
       </div>
       <div class="ts-chips">
         <span class="ts-chip">Todas las solicitudes serán gestionadas mediante tareas y adjuntos respectivos</span>
@@ -1621,13 +1621,13 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
         <div class="res-card-title">Cancelación</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD INGRESO CORTESIA CANCELACION TELCONET</div>
-        <div class="no-format">NO SE ADJUNTA FORMATO</div>
+        <div class="no-format">NO REQUIERE FORMATO</div>
       </div>
       <div class="res-card">
         <div class="res-card-title">Cambio de Razón Social</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CAMBIO DE RAZON SOCIAL</div>
-        <div class="no-format">NO SE ADJUNTA FORMATO</div>
+        <div class="no-format">NO REQUIERE FORMATO</div>
       </div>
     </div>
   </div>
@@ -1678,7 +1678,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
           <div class="task-chips">
             <div class="task-chip">SOLICITUD DE REQUERIMIENTOS DC - SERVICIO NG FIREWALL</div>
           </div>
-          <div class="no-format">NO SE ADJUNTA FORMATO</div>
+          <div class="no-format">NO REQUIERE FORMATO</div>
         </div>
 
       </div>
@@ -1761,13 +1761,13 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
         <div class="res-card-title">Cancelación</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CORTESIA CANCELACION MEGADATOS</div>
-        <div class="no-format">NO SE ADJUNTA FORMATO</div>
+        <div class="no-format">NO REQUIERE FORMATO</div>
       </div>
       <div class="res-card">
         <div class="res-card-title">Cambio de Razón Social</div>
         <div class="res-card-desc"><b>PROCESO:</b> TAREAS DE PEI - GESTION COMERCIAL</div>
         <div class="res-card-desc"><b>TAREA:</b> SOLICITUD GESTION CAMBIO DE RAZON SOCIAL</div>
-        <div class="no-format">NO SE ADJUNTA FORMATO</div>
+        <div class="no-format">NO REQUIERE FORMATO</div>
       </div>
     </div>
   </div>
@@ -1931,7 +1931,7 @@ function rTab2(btn, panelId) {
       </svg>
     </div>
     <div class="mg-alert-body">
-      <div class="mg-alert-title">Campo obligatorio adicional</div>
+      <div class="mg-alert-title">Campos importantes:</div>
       <div style="font-size:.85rem;color:#d7e8ff;line-height:1.55;">
         Es necesario complementar el registro con los siguientes campos que permitirán el control de los ingresos:
       </div>
@@ -1948,22 +1948,192 @@ function rTab2(btn, panelId) {
 
 
 <section class="slide theme-navy" data-index="9" id="slide-9">
-<div class="slide-pad">
-  <div class="badge"><span class="badge-num">06</span> Registro Ordenes de Trabajo</div>
-  <h2 class="title-xl">Ejemplo Registros</h2>
-  <p class="subtitle" style="margin-bottom:1.2rem;">Proceso paso a paso para ingresar una Orden de Trabajo: </p>
-  <div class="agenda-grid" style="margin-top:.5rem;">
-    <div class="agenda-item"><div class="num" style="color:var(--blue);">Ejemplo 1</div><div class="underline u-blue"></div><h3>Small Business</h3><p>LOGIN: tn-priv-uio-contraloria</p></div>
-    <div class="agenda-item"><div class="num" style="color:var(--gold);">Ejemplo 2</div><div class="underline u-yellow"></div><h3>Inernet Dedicado</h3><p>LOGIN: tn-priv-uio-juaneljuri</p></div>
-    <div class="agenda-item"><div class="num" style="color:var(--pink);">Ejemplo 3</div><div class="underline u-pink"></div><h3>Máquina Virtual</h3><p>LOGIN: tn-priv-uio-contraloria</p></div>
-    <div class="agenda-item"><div class="num" style="color:var(--green);">Ejemplo 4</div><div class="underline u-green"></div><h3>Firma Electrónica</h3><p>EMPLEADO: ALejandra Gallardo</p></div>
+<div class="slide-pad" style="padding-top:calc(36px + .9rem);">
+  <div class="badge"><span class="badge-num">0X</span> Categorías de Productos</div>
+  <h2 class="title-xl" style="margin-bottom:.6rem;">Catálogo de Productos</h2>
+  <p style="color:#d7e8ff;font-size:1rem;margin-bottom:1.2rem;line-height:1.6;">
+    Selecciona una categoría para ver los productos disponibles:
+  </p>
+
+  <style>
+    .cp-grid {
+      display:grid; grid-template-columns:repeat(4,1fr); gap:.5rem; margin-bottom:.85rem;
+      max-width:100%;
+    }
+    .cp-grid .cp-btn:nth-child(5),
+    .cp-grid .cp-btn:nth-child(6),
+    .cp-grid .cp-btn:nth-child(7) {
+      grid-column: span 1;
+    }
+    .cp-btn {
+      padding:.6rem .5rem; border-radius:10px;
+      border:1.5px solid rgba(255,255,255,.12);
+      background:rgba(255,255,255,.05);
+      cursor:pointer; text-align:center;
+      font-size:.72rem; font-weight:600; color:#8ab4d4;
+      transition:border-color .15s, background .15s, color .15s;
+      font-family:inherit; letter-spacing:.01em;
+    }
+    .cp-btn:hover { border-color:rgba(255,255,255,.25); color:#c8dff5; background:rgba(255,255,255,.09); }
+    .cp-btn.cp-active { border-color:#00c9ff; background:rgba(0,201,255,.1); color:#00c9ff; }
+    .cp-btn .cp-icon { font-size:1.3rem; display:block; margin-bottom:.3rem; }
+    .cp-btn .cp-count { font-size:.65rem; color:#4a6a88; margin-top:.2rem; }
+    .cp-btn.cp-active .cp-count { color:#0090bb; }
+
+    .cp-panel {
+      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
+      border-radius:12px; padding:.9rem 1.1rem; min-height:110px;
+      transition:opacity .2s;
+    }
+    .cp-panel-title {
+      font-size:.85rem; font-weight:600; color:#e0eeff;
+      margin-bottom:.65rem; display:flex; align-items:center; gap:.45rem;
+    }
+    .cp-panel-title svg { width:16px; height:16px; stroke:#00c9ff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+    .cp-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .cp-chip {
+      font-size:.75rem; padding:.28rem .7rem;
+      border-radius:6px; background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.1);
+      color:#9bbedd; transition:border-color .12s, color .12s; cursor:default;
+    }
+    .cp-chip:hover { border-color:rgba(0,201,255,.4); color:#00c9ff; }
+  </style>
+
+  <!-- Botones de categoría -->
+  <div class="cp-grid">
+
+    <button class="cp-btn cp-active" id="cp-conn" onclick="cpShow('conn')">
+      <span class="cp-icon">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+      </span>
+      Connectivity
+      <div class="cp-count">8 productos</div>
+    </button>
+
+    <button class="cp-btn" id="cp-cloud" onclick="cpShow('cloud')">
+      <span class="cp-icon">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+      </span>
+      Cloud
+      <div class="cp-count">6 productos</div>
+    </button>
+
+    <button class="cp-btn" id="cp-sec" onclick="cpShow('sec')">
+      <span class="cp-icon">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </span>
+      Security
+      <div class="cp-count">5 productos</div>
+    </button>
+
+    <button class="cp-btn" id="cp-seg" onclick="cpShow('seg')">
+      <span class="cp-icon">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h4"/></svg>
+      </span>
+      SEG Electronica
+      <div class="cp-count">2 productos</div>
+    </button>
+
+    <button class="cp-btn" id="cp-net" onclick="cpShow('net')">
+      <span class="cp-icon">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-5.5 6M12 11l5.5 6"/></svg>
+      </span>
+      Network
+      <div class="cp-count">4 productos</div>
+    </button>
+
+    <button class="cp-btn" id="cp-col" onclick="cpShow('col')">
+      <span class="cp-icon">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </span>
+      Collaboration
+      <div class="cp-count">3 productos</div>
+    </button>
+
+    <button class="cp-btn" id="cp-tra" onclick="cpShow('tra')">
+      <span class="cp-icon">
+        <svg viewBox="0 0 24 24" style="width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;display:inline-block"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+      </span>
+      Transit
+      <div class="cp-count">3 productos</div>
+    </button>
+
+
+
   </div>
+
+  <!-- Panel de productos -->
+  <div class="cp-panel" id="cp-panel">
+    <div class="cp-panel-title" id="cp-ptitle">
+      <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+      Connectivity
+    </div>
+    <div class="cp-chips" id="cp-pchips"></div>
+  </div>
+
+  <script>
+    var cpData = {
+      conn: {
+        label: 'Connectivity',
+        icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>',
+        items: ['Internet Dedicado','Small Business','Internet Inalámbrico','Fibra Óptica GPON','Redbusiness','Punto a Punto Radio','Banda Ancha Móvil','Servicios SD-WAN']
+      },
+      cloud: {
+        label: 'Cloud',
+        icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>',
+        items: ['Máquinas Virtuales','Almacenamiento Cloud','Housing DC','Colocation','Backup en la Nube','NG Firewall']
+      },
+      sec: {
+        label: 'Security',
+        icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+        items: ['Firewall Gestionado','DDoS Protection','VPN Corporativa','WAF','SOC Gestionado']
+      },
+      seg: {
+        label: 'SEG Electronica',
+        icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 10h8M8 14h4"/></svg>',
+        items: ['Firma Electrónica','Renovación FE']
+      },
+      net: {
+        label: 'Network',
+        icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-5.5 6M12 11l5.5 6"/></svg>',
+        items: ['MPLS','VPLS','Carrier Ethernet','SD-WAN Gestionado']
+      },
+      col: {
+        label: 'Collaboration',
+        icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+        items: ['Telefonía IP','Videoconferencia','Microsoft Teams Direct Routing']
+      },
+      tra: {
+        label: 'Transit',
+        icon: '<svg viewBox="0 0 24 24" style="width:16px;height:16px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>',
+        items: ['Tránsito IP Internacional','Peering Nacional','BGP Multihoming']
+      },
+
+    };
+
+    function cpShow(id) {
+      Object.keys(cpData).forEach(function(k) {
+        var btn = document.getElementById('cp-'+k);
+        if (btn) btn.classList.toggle('cp-active', k === id);
+      });
+      var d = cpData[id];
+      document.getElementById('cp-ptitle').innerHTML = d.icon + ' ' + d.label;
+      var chips = d.items.map(function(t){ return '<span class="cp-chip">' + t + '</span>'; }).join('');
+      var panel = document.getElementById('cp-panel');
+      panel.style.opacity = '0';
+      document.getElementById('cp-pchips').innerHTML = chips;
+      setTimeout(function(){ panel.style.opacity = '1'; }, 40);
+    }
+
+    cpShow('conn');
+  </script>
+
 </div>
+</section>
 
 
 
-
-</div>
 <div class="slide-foot">
   <button class="nav-btn" onclick="go(-1)" aria-label="Anterior">&#8592;</button>
   <div class="dots"><span class="dot active" onclick="jumpTo(0)"></span><span class="dot" onclick="jumpTo(1)"></span><span class="dot" onclick="jumpTo(2)"></span><span class="dot" onclick="jumpTo(3)"></span><span class="dot" onclick="jumpTo(4)"></span><span class="dot" onclick="jumpTo(5)"></span><span class="dot" onclick="jumpTo(6)"></span><span class="dot" onclick="jumpTo(7)"></span><span class="dot" onclick="jumpTo(8)"></span><span class="dot" onclick="jumpTo(9)"></span><span class="dot" onclick="jumpTo(10)"></span></div>
