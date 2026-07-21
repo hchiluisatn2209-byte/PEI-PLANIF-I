@@ -370,6 +370,10 @@ h1,h2,h3,.font-head{font-family:'Outfit',sans-serif;font-weight:700;}
   color:var(--cy);background:rgba(0,180,216,.12);
   border-radius:4px;padding:.2rem .6rem;margin-bottom:.55rem;
 }
+/* Company brand colors */
+.tag-telconet  { color:#00c9ff; background:rgba(0,201,255,.14); }
+.tag-megadatos { color:#ff9900; background:rgba(255,153,0,.14); }
+.tag-security  { color:#00e576; background:rgba(0,229,118,.14); }
 .task-card h4{font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:.38rem;}
 .task-card p{font-size:1.08rem;color:#c3c8d6;line-height:1.55;margin-bottom:.45rem;}
 .task-card .task-assign{font-size:1.05rem;color:#cfd4e2;line-height:1.6;margin-bottom:.15rem;}
@@ -667,7 +671,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
       Equipo de Planificación · Tercerizados
     </div>
     <h1 style="font-size:clamp(3rem,6.8vw,5.6rem);font-weight:900;line-height:1.0;margin-bottom:1.1rem;letter-spacing:-.01em;">Capacitación<br><span style="background:linear-gradient(90deg,var(--cy),var(--tl));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Gestión<br>Cortesías</span></h1>
-    <p class="desc">Solicitudes de cortesías con Telconet  | Megadatos  | Security Data</p>
+    <p class="desc">Solicitudes de cortesías con <span style="color:#00c9ff;font-weight:700;">Telconet</span> | <span style="color:#ff9900;font-weight:700;">Megadatos</span> | <span style="color:#00e576;font-weight:700;">Security Data</span></p>
     <div class="facilitator-card">
       <div class="facilitator-avatar">GG</div>
       <div>
@@ -763,7 +767,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                 </div>
 
                 <h3 style="
-                    color:#ffffff;
+                    color:#00c9ff;
                     font-size:2rem;
                     font-weight:700;
                     margin:0;
@@ -818,7 +822,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                 </div>
 
                 <h3 style="
-                    color:#ffffff;
+                    color:#ff9900;
                     font-size:2rem;
                     font-weight:700;
                     margin:0;
@@ -873,7 +877,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                 </div>
 
                 <h3 style="
-                    color:#ffffff;
+                    color:#00e576;
                     font-size:2rem;
                     font-weight:700;
                     margin:0;
@@ -905,7 +909,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
             Cortesías Empresas
         </div>
 
-        <h2 class="title-xl" style="margin-bottom:1.1rem;">
+        <h2 class="title-xl" style="margin-bottom:1.1rem;color:#00c9ff;">
             Telconet
         </h2>
 
@@ -918,7 +922,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 
                 <p style="margin-bottom:1.5rem;">
                     Las cortesías deben registrarse únicamente bajo la Razón Social de
-                    TELCONET, respetando los lineamientos y parámetros de nomenclatura
+                    <span style="color:#00c9ff;font-weight:700;">TELCONET</span>, respetando los lineamientos y parámetros de nomenclatura
                     establecidos para cada tipo de servicio.
                 </p>
 
@@ -941,7 +945,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                         <div class="task-meta">
                             <span>
                                 Creación login:
-                                <b>PEI Tercerizados</b>
+                                <b style="color:#00c9ff;">PEI Tercerizados</b>
                             </span>
                         </div>
                     </div>
@@ -958,7 +962,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                         <div class="task-meta">
                             <span>
                                 Creación login:
-                                <b>PEI Tercerizados</b>
+                                <b style="color:#00c9ff;">PEI Tercerizados</b>
                             </span>
                         </div>
                     </div>
@@ -976,7 +980,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
                         <div class="task-meta">
                             <span>
                                 Creación login:
-                                <b>PEI Tercerizados</b>
+                                <b style="color:#00c9ff;">PEI Tercerizados</b>
                             </span>
                         </div>
                     </div>
@@ -1002,7 +1006,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
     </div>
 
     <h2 class="title-xl" style="margin-bottom:1rem;">
-      Megadatos | Security Data
+      <span style="color:#ff9900;">Megadatos</span> <span style="color:#fff;">|</span> <span style="color:#00e576;">Security Data</span>
     </h2>
 
     <div style="
@@ -1015,7 +1019,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
       <!-- MEGADATOS -->
       <div class="task-card">
 
-        <span class="task-proc-tag">MEGADATOS</span>
+        <span class="task-proc-tag tag-megadatos">MEGADATOS</span>
 
         <p style="margin:1rem 0;">
           Las cortesías son gestionadas desde Telconet hacia Megadatos mediante correo.
@@ -1039,7 +1043,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
             <div class="task-meta">
               <span>
                 Creación login:
-                <b>Megadatos</b>
+                <b style="color:#ff9900;">Megadatos</b>
               </span>
             </div>
           </div>
@@ -1056,7 +1060,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
             <div class="task-meta">
               <span>
                 Creación login:
-                <b>Megadatos</b>
+                <b style="color:#ff9900;">Megadatos</b>
               </span>
             </div>
           </div>
@@ -1068,7 +1072,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
       <!-- SECURITY DATA -->
       <div class="task-card">
 
-        <span class="task-proc-tag">SECURITY DATA</span>
+        <span class="task-proc-tag tag-security">SECURITY DATA</span>
 
         <p style="margin:1rem 0;">
           Las cortesías son gestionadas desde Telconet hacia Security Data mediante el Portal SD.
@@ -1097,7 +1101,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
             <div class="task-meta">
               <span>
                 Creación FIRMA:
-                <b>Security Data</b>
+                <b style="color:#00e576;">Security Data</b>
               </span>
             </div>
           </div>
@@ -1120,11 +1124,11 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
     </p>
 
     <style>
-      .ts-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+      .ts-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.2rem; }
       .ts-card {
         background:rgba(255,255,255,.05);
         border:1.5px solid rgba(255,255,255,.1);
-        border-radius:14px;
+        border-radius:16px;
         overflow:hidden;
         cursor:pointer;
         transition:border-color .18s, background .18s;
@@ -1132,18 +1136,18 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
       .ts-card:hover { background:rgba(255,255,255,.08); border-color:rgba(255,255,255,.22); }
       .ts-card.ts-active { border-color:#00c9ff; background:rgba(0,201,255,.07); }
       .ts-card-header {
-        padding:.75rem 1rem;
+        padding:1rem 1.2rem;
         display:flex;
         align-items:center;
-        gap:.6rem;
+        gap:.7rem;
         border-bottom:1px solid rgba(255,255,255,.08);
       }
 
       .ts-tag {
-        font-size:.68rem;
+        font-size:.82rem;
         font-weight:700;
         letter-spacing:.07em;
-        padding:.25rem .65rem;
+        padding:.3rem .8rem;
         border-radius:6px;
       }
       .ts-tag-teal  { background:#00c9ff22; color:#00c9ff; }
@@ -1151,54 +1155,74 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
       .ts-tag-coral { background:#00e57622; color:#00e576; }
       .ts-count {
         margin-left:auto;
-        font-size:.72rem;
-        font-weight:600;
+        font-size:.82rem;
+        font-weight:700;
         color:#8ab4d4;
         background:rgba(255,255,255,.07);
         border:1px solid rgba(255,255,255,.1);
         border-radius:20px;
-        padding:.15rem .55rem;
+        padding:.2rem .65rem;
       }
-      .ts-body { padding:.4rem 0 .6rem; }
+      .ts-body { padding:.6rem 0 .8rem; }
       .ts-item {
         display:flex;
         align-items:center;
-        gap:.6rem;
-        padding:.42rem 1rem;
-        font-size:.875rem;
+        gap:.7rem;
+        padding:.6rem 1.2rem;
+        font-size:1.05rem;
         color:#c8dff5;
         border-radius:8px;
         margin:0 .4rem;
         transition:background .12s, color .12s;
       }
       .ts-item:hover { background:rgba(255,255,255,.07); color:#fff; }
-      .ts-item svg { width:15px; height:15px; flex-shrink:0; opacity:.55; }
+      .ts-item svg { width:17px; height:17px; flex-shrink:0; opacity:.6; }
+
+      /* ===== NOTA mejorada ===== */
       .ts-detail {
         display:none;
-        margin-top:1rem;
-        background:rgba(0,201,255,.06);
-        border:1px solid rgba(0,201,255,.25);
-        border-radius:12px;
-        padding:.9rem 1.1rem;
+        margin-top:1.2rem;
       }
       .ts-detail.ts-show { display:block; }
+      .ts-nota-box {
+        display:flex;
+        align-items:flex-start;
+        gap:1rem;
+        background:linear-gradient(135deg,rgba(0,201,255,.1),rgba(0,207,193,.06));
+        border:1.5px solid rgba(0,201,255,.35);
+        border-radius:14px;
+        padding:1.1rem 1.4rem;
+      }
+      .ts-nota-icon {
+        width:38px;height:38px;border-radius:10px;
+        background:rgba(0,201,255,.18);
+        display:flex;align-items:center;justify-content:center;flex-shrink:0;
+      }
+      .ts-nota-icon svg { width:20px;height:20px;stroke:#00c9ff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round; }
+      .ts-nota-label {
+        font-size:.78rem;font-weight:700;letter-spacing:.1em;
+        color:#00c9ff;text-transform:uppercase;margin-bottom:.4rem;
+      }
+      .ts-nota-text {
+        font-size:1rem;color:#dce8ff;line-height:1.6;
+      }
+      .ts-chips { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.5rem; }
+      .ts-chip {
+        font-size:.85rem;
+        background:rgba(255,255,255,.07);
+        border:1px solid rgba(255,255,255,.12);
+        border-radius:20px;
+        padding:.32rem .85rem;
+        color:#9bbedd;
+      }
       .ts-detail-title {
-        font-size:.78rem;
-        font-weight:600;
+        font-size:.85rem;
+        font-weight:700;
         color:#00c9ff;
         margin-bottom:.55rem;
         display:flex;
         align-items:center;
         gap:.4rem;
-      }
-      .ts-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
-      .ts-chip {
-        font-size:.72rem;
-        background:rgba(255,255,255,.07);
-        border:1px solid rgba(255,255,255,.12);
-        border-radius:20px;
-        padding:.28rem .7rem;
-        color:#9bbedd;
       }
     </style>
 
@@ -1305,12 +1329,14 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
 
     <!-- PANELES DE DETALLE -->
     <div class="ts-detail ts-show" id="ts-detail-tn">
-      <div class="ts-detail-title">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        NOTA:
-      </div>
-      <div class="ts-chips">
-        <span class="ts-chip">Todas las solicitudes serán gestionadas mediante tareas y adjuntos respectivos</span>
+      <div class="ts-nota-box">
+        <div class="ts-nota-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <div>
+          <div class="ts-nota-label">Nota importante</div>
+          <div class="ts-nota-text">Todas las solicitudes serán gestionadas mediante <strong style="color:#fff;">tareas y adjuntos respectivos</strong> en el sistema.</div>
+        </div>
       </div>
     </div>
     <div class="ts-detail" id="ts-detail-mg">
@@ -1364,47 +1390,78 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
     </p>
 
     <style>
-      .fg-steps { display:grid; grid-template-columns:1fr 50px 1fr 50px 1fr; align-items:start; gap:0; margin-bottom:1.2rem; }
+      .fg-steps { display:grid; grid-template-columns:1fr 50px 1fr 50px 1fr; align-items:start; gap:0; margin-bottom:1.4rem; }
       .fg-step { cursor:pointer; }
+
+      /* Número de paso */
       .fg-num {
-        width:24px; height:24px; border-radius:50%;
-        background:rgba(255,255,255,.12); font-size:.72rem; font-weight:700;
+        width:28px; height:28px; border-radius:50%;
+        background:rgba(255,255,255,.1); font-size:.8rem; font-weight:700;
         color:#8ab4d4; display:flex; align-items:center; justify-content:center;
-        margin:0 auto .5rem; transition:background .2s, color .2s;
+        margin:0 auto .6rem; transition:background .25s, color .25s, box-shadow .25s;
       }
-      .fg-step.fg-active .fg-num { background:#00c9ff; color:#03142b; }
+
+      /* Colores por paso al activarse */
+      .fg-step[data-step="1"].fg-active .fg-num { background:#00c9ff; color:#03142b; box-shadow:0 0 0 4px rgba(0,201,255,.2); }
+      .fg-step[data-step="2"].fg-active .fg-num { background:#7c6af5; color:#fff;    box-shadow:0 0 0 4px rgba(124,106,245,.2); }
+      .fg-step[data-step="3"].fg-active .fg-num { background:#2cd9b0; color:#03142b; box-shadow:0 0 0 4px rgba(44,217,176,.2); }
+
+      /* Círculo base */
       .fg-circle {
-        width:120px; height:120px; border-radius:50%; margin:0 auto 1rem;
+        width:140px; height:140px; border-radius:50%; margin:0 auto 1rem;
         display:flex; align-items:center; justify-content:center;
-        text-align:center; font-size:.85rem; font-weight:500; line-height:1.35;
-        border:2px solid rgba(255,255,255,.15);
-        background:rgba(91,155,230,.18); color:#c8dff5;
-        transition:border-color .2s, background .2s, transform .2s;
+        text-align:center; font-size:1rem; font-weight:600; line-height:1.4;
+        border:2px solid rgba(255,255,255,.12);
+        background:rgba(91,155,230,.1); color:#a0b8d8;
+        transition:border-color .25s, background .25s, transform .25s, color .25s, box-shadow .25s;
       }
-      .fg-step.fg-active .fg-circle {
-        border-color:#00c9ff; background:rgba(0,201,255,.15);
-        color:#fff; transform:scale(1.06);
+
+      /* Colores por paso al activarse */
+      .fg-step[data-step="1"].fg-active .fg-circle {
+        border-color:#00c9ff;
+        background:radial-gradient(circle at 35% 35%, rgba(0,201,255,.25), rgba(0,180,216,.08));
+        color:#fff; transform:scale(1.08);
+        box-shadow:0 0 30px rgba(0,201,255,.2), inset 0 0 20px rgba(0,201,255,.08);
       }
-      .fg-step-label { text-align:center; font-size:.78rem; font-weight:500; color:#8ab4d4; transition:color .2s; }
-      .fg-step.fg-active .fg-step-label { color:#00c9ff; }
-      .fg-arrow { display:flex; align-items:center; justify-content:center; padding-top:60px; }
-      .fg-arrow svg { width:30px; height:30px; opacity:.35; }
+      .fg-step[data-step="2"].fg-active .fg-circle {
+        border-color:#7c6af5;
+        background:radial-gradient(circle at 35% 35%, rgba(124,106,245,.25), rgba(100,80,230,.08));
+        color:#fff; transform:scale(1.08);
+        box-shadow:0 0 30px rgba(124,106,245,.2), inset 0 0 20px rgba(124,106,245,.08);
+      }
+      .fg-step[data-step="3"].fg-active .fg-circle {
+        border-color:#2cd9b0;
+        background:radial-gradient(circle at 35% 35%, rgba(44,217,176,.25), rgba(0,207,193,.08));
+        color:#fff; transform:scale(1.08);
+        box-shadow:0 0 30px rgba(44,217,176,.2), inset 0 0 20px rgba(44,217,176,.08);
+      }
+
+      /* Label del paso */
+      .fg-step-label { text-align:center; font-size:.9rem; font-weight:600; color:#8ab4d4; transition:color .25s; }
+      .fg-step[data-step="1"].fg-active .fg-step-label { color:#00c9ff; }
+      .fg-step[data-step="2"].fg-active .fg-step-label { color:#7c6af5; }
+      .fg-step[data-step="3"].fg-active .fg-step-label { color:#2cd9b0; }
+
+      .fg-arrow { display:flex; align-items:center; justify-content:center; padding-top:68px; }
+      .fg-arrow svg { width:30px; height:30px; opacity:.3; }
+
+      /* Panel de detalle */
       .fg-detail {
-        background:rgba(0,201,255,.06); border:1px solid rgba(0,201,255,.22);
-        border-radius:14px; padding:1rem 1.25rem; min-height:90px;
+        background:rgba(0,201,255,.05); border:1px solid rgba(0,201,255,.2);
+        border-radius:14px; padding:1.1rem 1.4rem; min-height:90px;
         transition:opacity .25s;
       }
-      .fg-detail-title { font-size:.8rem; font-weight:600; color:#00c9ff; margin-bottom:.65rem; display:flex; align-items:center; gap:.4rem; }
-      .fg-ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.45rem; }
-      .fg-ul li { display:flex; align-items:flex-start; gap:.55rem; font-size:.9rem; color:#c8dff5; line-height:1.5; }
-      .fg-ul li::before { content:''; width:6px; height:6px; border-radius:50%; background:#00c9ff; flex-shrink:0; margin-top:.45rem; opacity:.7; }
-      .fg-footer { margin-top:1rem; text-align:center; font-size:.78rem; color:#5a7a9a; }
+      .fg-detail-title { font-size:.95rem; font-weight:700; color:#00c9ff; margin-bottom:.75rem; display:flex; align-items:center; gap:.5rem; }
+      .fg-ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:.55rem; }
+      .fg-ul li { display:flex; align-items:flex-start; gap:.6rem; font-size:1rem; color:#c8dff5; line-height:1.55; }
+      .fg-ul li::before { content:''; width:7px; height:7px; border-radius:50%; background:var(--bc, #00c9ff); flex-shrink:0; margin-top:.48rem; opacity:.9; }
+      .fg-footer { margin-top:1rem; text-align:center; font-size:.85rem; color:#5a7a9a; }
       .fg-footer b { color:#8ab4d4; font-weight:600; }
     </style>
 
     <div class="fg-steps">
 
-      <div class="fg-step fg-active" id="fg-s1" onclick="fgSelect(1)">
+      <div class="fg-step fg-active" data-step="1" id="fg-s1" onclick="fgSelect(1)">
         <div class="fg-num">1</div>
         <div class="fg-circle">Departamento<br>Solicitante</div>
         <div class="fg-step-label">Solicitud</div>
@@ -1417,7 +1474,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
         </svg>
       </div>
 
-      <div class="fg-step" id="fg-s2" onclick="fgSelect(2)">
+      <div class="fg-step" data-step="2" id="fg-s2" onclick="fgSelect(2)">
         <div class="fg-num">2</div>
         <div class="fg-circle">PEI<br>Validación<br>e Ingreso</div>
         <div class="fg-step-label">Validación</div>
@@ -1430,7 +1487,7 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
         </svg>
       </div>
 
-      <div class="fg-step" id="fg-s3" onclick="fgSelect(3)">
+      <div class="fg-step" data-step="3" id="fg-s3" onclick="fgSelect(3)">
         <div class="fg-num">3</div>
         <div class="fg-circle">PEI<br>Implementación</div>
         <div class="fg-step-label">Ejecución</div>
@@ -1475,15 +1532,21 @@ table.deck-table tr:nth-child(even) td{background:rgba(0,180,216,.04);}
     };
 
     function fgSelect(n) {
+      var colors = {1:'#00c9ff', 2:'#7c6af5', 3:'#2cd9b0'};
       [1,2,3].forEach(function(k) {
         document.getElementById('fg-s'+k).classList.remove('fg-active');
       });
       document.getElementById('fg-s'+n).classList.add('fg-active');
       var d = fgData[n];
+      var c = colors[n];
       document.getElementById('fg-dtitle').textContent = d.title;
-      var ul = document.getElementById('fg-dlist');
-      ul.innerHTML = d.items.map(function(t){ return '<li>'+t+'</li>'; }).join('');
+      document.getElementById('fg-dtitle').style.color = c;
       var det = document.getElementById('fg-detail');
+      det.style.borderColor = c.replace(')',', .3)').replace('rgb','rgba') || 'rgba(0,201,255,.2)';
+      det.style.borderColor = c + '55';
+      var ul = document.getElementById('fg-dlist');
+      ul.innerHTML = d.items.map(function(t){ return '<li style="--bc:'+c+'">'+t+'</li>'; }).join('');
+      ul.querySelectorAll('li').forEach(function(li){ li.style.setProperty('--bc', c); });
       det.style.opacity = '0';
       setTimeout(function(){ det.style.opacity = '1'; }, 30);
     }
@@ -1959,43 +2022,89 @@ function rTab2(btn, panelId) {
   </p>
 
   <style>
+    /* Colores por categoría */
+    :root {
+      --c-conn:#00c9ff;  --cbg-conn:rgba(0,201,255,.12);   --cbg-conn-active:rgba(0,201,255,.25);
+      --c-cloud:#7c6af5; --cbg-cloud:rgba(124,106,245,.12); --cbg-cloud-active:rgba(124,106,245,.28);
+      --c-sec:#ff4757;   --cbg-sec:rgba(255,71,87,.12);     --cbg-sec-active:rgba(255,71,87,.26);
+      --c-seg:#ffd166;   --cbg-seg:rgba(255,209,102,.12);   --cbg-seg-active:rgba(255,209,102,.24);
+      --c-net:#2cd9b0;   --cbg-net:rgba(44,217,176,.12);    --cbg-net-active:rgba(44,217,176,.26);
+      --c-col:#ff8c42;   --cbg-col:rgba(255,140,66,.12);    --cbg-col-active:rgba(255,140,66,.26);
+      --c-tra:#a78bfa;   --cbg-tra:rgba(167,139,250,.12);   --cbg-tra-active:rgba(167,139,250,.26);
+    }
     .cp-grid {
-      display:grid; grid-template-columns:repeat(4,1fr); gap:.5rem; margin-bottom:.85rem;
+      display:grid; grid-template-columns:repeat(4,1fr); gap:.6rem; margin-bottom:.9rem;
       max-width:100%;
     }
-    .cp-grid .cp-btn:nth-child(5),
-    .cp-grid .cp-btn:nth-child(6),
-    .cp-grid .cp-btn:nth-child(7) {
-      grid-column: span 1;
-    }
     .cp-btn {
-      padding:.6rem .5rem; border-radius:10px;
-      border:1.5px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.05);
+      padding:.85rem .5rem; border-radius:12px;
       cursor:pointer; text-align:center;
-      font-size:.72rem; font-weight:600; color:#8ab4d4;
-      transition:border-color .15s, background .15s, color .15s;
+      font-size:.82rem; font-weight:600; color:#7a9ab8;
+      transition:border-color .18s, background .2s, color .18s, transform .15s, box-shadow .2s;
       font-family:inherit; letter-spacing:.01em;
     }
-    .cp-btn:hover { border-color:rgba(255,255,255,.25); color:#c8dff5; background:rgba(255,255,255,.09); }
-    .cp-btn.cp-active { border-color:#00c9ff; background:rgba(0,201,255,.1); color:#00c9ff; }
-    .cp-btn .cp-icon { font-size:1.3rem; display:block; margin-bottom:.3rem; }
-    .cp-btn .cp-count { font-size:.65rem; color:#4a6a88; margin-top:.2rem; }
-    .cp-btn.cp-active .cp-count { color:#0090bb; }
+    .cp-btn .cp-icon { font-size:1.3rem; display:block; margin-bottom:.45rem; }
+    .cp-btn .cp-icon svg { width:26px; height:26px; transition:stroke .18s; }
+    .cp-btn .cp-count { font-size:.7rem; color:#4a6a88; margin-top:.3rem; font-weight:500; }
+    .cp-btn.cp-active .cp-count { opacity:.8; }
+
+    /* Bordes y fondos base por categoría (siempre visibles, suaves) */
+    .cp-btn#cp-conn  { border:1.5px solid rgba(0,201,255,.35);    background:rgba(0,201,255,.06);    }
+    .cp-btn#cp-cloud { border:1.5px solid rgba(124,106,245,.35);  background:rgba(124,106,245,.06);  }
+    .cp-btn#cp-sec   { border:1.5px solid rgba(255,71,87,.35);    background:rgba(255,71,87,.06);    }
+    .cp-btn#cp-seg   { border:1.5px solid rgba(255,209,102,.35);  background:rgba(255,209,102,.06);  }
+    .cp-btn#cp-net   { border:1.5px solid rgba(44,217,176,.35);   background:rgba(44,217,176,.06);   }
+    .cp-btn#cp-col   { border:1.5px solid rgba(255,140,66,.35);   background:rgba(255,140,66,.06);   }
+    .cp-btn#cp-tra   { border:1.5px solid rgba(167,139,250,.35);  background:rgba(167,139,250,.06);  }
+
+    /* Hover: borde más visible */
+    .cp-btn#cp-conn:hover  { background:rgba(0,201,255,.13);   border-color:rgba(0,201,255,.6);   color:#c8dff5; transform:translateY(-1px); }
+    .cp-btn#cp-cloud:hover { background:rgba(124,106,245,.13); border-color:rgba(124,106,245,.6); color:#c8dff5; transform:translateY(-1px); }
+    .cp-btn#cp-sec:hover   { background:rgba(255,71,87,.13);   border-color:rgba(255,71,87,.6);   color:#c8dff5; transform:translateY(-1px); }
+    .cp-btn#cp-seg:hover   { background:rgba(255,209,102,.13); border-color:rgba(255,209,102,.6); color:#c8dff5; transform:translateY(-1px); }
+    .cp-btn#cp-net:hover   { background:rgba(44,217,176,.13);  border-color:rgba(44,217,176,.6);  color:#c8dff5; transform:translateY(-1px); }
+    .cp-btn#cp-col:hover   { background:rgba(255,140,66,.13);  border-color:rgba(255,140,66,.6);  color:#c8dff5; transform:translateY(-1px); }
+    .cp-btn#cp-tra:hover   { background:rgba(167,139,250,.13); border-color:rgba(167,139,250,.6); color:#c8dff5; transform:translateY(-1px); }
+
+    /* Activo: fondo intenso + borde pleno + sombra + color de texto */
+    .cp-btn#cp-conn.cp-active  { border-color:var(--c-conn);  background:var(--cbg-conn-active);  color:var(--c-conn);  box-shadow:0 0 18px rgba(0,201,255,.2);   }
+    .cp-btn#cp-cloud.cp-active { border-color:var(--c-cloud); background:var(--cbg-cloud-active); color:var(--c-cloud); box-shadow:0 0 18px rgba(124,106,245,.2); }
+    .cp-btn#cp-sec.cp-active   { border-color:var(--c-sec);   background:var(--cbg-sec-active);   color:var(--c-sec);   box-shadow:0 0 18px rgba(255,71,87,.2);   }
+    .cp-btn#cp-seg.cp-active   { border-color:var(--c-seg);   background:var(--cbg-seg-active);   color:var(--c-seg);   box-shadow:0 0 18px rgba(255,209,102,.2); }
+    .cp-btn#cp-net.cp-active   { border-color:var(--c-net);   background:var(--cbg-net-active);   color:var(--c-net);   box-shadow:0 0 18px rgba(44,217,176,.2);  }
+    .cp-btn#cp-col.cp-active   { border-color:var(--c-col);   background:var(--cbg-col-active);   color:var(--c-col);   box-shadow:0 0 18px rgba(255,140,66,.2);  }
+    .cp-btn#cp-tra.cp-active   { border-color:var(--c-tra);   background:var(--cbg-tra-active);   color:var(--c-tra);   box-shadow:0 0 18px rgba(167,139,250,.2); }
+
+    /* Iconos: color suave en reposo, pleno al activar */
+    .cp-btn#cp-conn  .cp-icon svg { stroke:rgba(0,201,255,.55); }
+    .cp-btn#cp-cloud .cp-icon svg { stroke:rgba(124,106,245,.55); }
+    .cp-btn#cp-sec   .cp-icon svg { stroke:rgba(255,71,87,.55); }
+    .cp-btn#cp-seg   .cp-icon svg { stroke:rgba(255,209,102,.55); }
+    .cp-btn#cp-net   .cp-icon svg { stroke:rgba(44,217,176,.55); }
+    .cp-btn#cp-col   .cp-icon svg { stroke:rgba(255,140,66,.55); }
+    .cp-btn#cp-tra   .cp-icon svg { stroke:rgba(167,139,250,.55); }
+
+    .cp-btn#cp-conn.cp-active  .cp-icon svg { stroke:var(--c-conn);  }
+    .cp-btn#cp-cloud.cp-active .cp-icon svg { stroke:var(--c-cloud); }
+    .cp-btn#cp-sec.cp-active   .cp-icon svg { stroke:var(--c-sec);   }
+    .cp-btn#cp-seg.cp-active   .cp-icon svg { stroke:var(--c-seg);   }
+    .cp-btn#cp-net.cp-active   .cp-icon svg { stroke:var(--c-net);   }
+    .cp-btn#cp-col.cp-active   .cp-icon svg { stroke:var(--c-col);   }
+    .cp-btn#cp-tra.cp-active   .cp-icon svg { stroke:var(--c-tra);   }
 
     .cp-panel {
-      background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.1);
-      border-radius:12px; padding:.9rem 1.1rem; min-height:110px;
-      transition:opacity .2s;
+      background:rgba(255,255,255,.04); border:1.5px solid rgba(255,255,255,.1);
+      border-radius:14px; padding:1rem 1.25rem; min-height:110px;
+      transition:opacity .2s, border-color .25s;
     }
     .cp-panel-title {
-      font-size:.85rem; font-weight:600; color:#e0eeff;
-      margin-bottom:.65rem; display:flex; align-items:center; gap:.45rem;
+      font-size:1rem; font-weight:700; color:#e0eeff;
+      margin-bottom:.75rem; display:flex; align-items:center; gap:.5rem;
     }
-    .cp-panel-title svg { width:16px; height:16px; stroke:#00c9ff; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
-    .cp-chips { display:flex; flex-wrap:wrap; gap:.4rem; }
+    .cp-panel-title svg { width:18px; height:18px; fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; flex-shrink:0; }
+    .cp-chips { display:flex; flex-wrap:wrap; gap:.45rem; }
     .cp-chip {
-      font-size:.75rem; padding:.28rem .7rem;
+      font-size:.82rem; padding:.32rem .8rem;
       border-radius:6px; background:rgba(255,255,255,.06);
       border:1px solid rgba(255,255,255,.1);
       color:#9bbedd; transition:border-color .12s, color .12s; cursor:default;
@@ -2115,17 +2224,36 @@ function rTab2(btn, panelId) {
 
     };
 
+    var cpColors = {
+      conn:'#00c9ff', cloud:'#7c6af5', sec:'#ff4757',
+      seg:'#ffd166',  net:'#2cd9b0',  col:'#ff8c42', tra:'#a78bfa'
+    };
+
     function cpShow(id) {
       Object.keys(cpData).forEach(function(k) {
         var btn = document.getElementById('cp-'+k);
         if (btn) btn.classList.toggle('cp-active', k === id);
       });
       var d = cpData[id];
-      document.getElementById('cp-ptitle').innerHTML = d.icon + ' ' + d.label;
-      var chips = d.items.map(function(t){ return '<span class="cp-chip">' + t + '</span>'; }).join('');
+      var c = cpColors[id] || '#00c9ff';
+
+      // Panel border color
       var panel = document.getElementById('cp-panel');
-      panel.style.opacity = '0';
+      panel.style.borderColor = c + '55';
+
+      // Title with colored icon
+      var iconColored = d.icon.replace(/stroke:#00c9ff/g, 'stroke:'+c);
+      var titleEl = document.getElementById('cp-ptitle');
+      titleEl.innerHTML = iconColored + ' ' + d.label;
+      titleEl.style.color = c;
+
+      // Chips with colored hover
+      var chips = d.items.map(function(t){
+        return '<span class="cp-chip" style="--chip-c:'+c+'">' + t + '</span>';
+      }).join('');
       document.getElementById('cp-pchips').innerHTML = chips;
+
+      panel.style.opacity = '0';
       setTimeout(function(){ panel.style.opacity = '1'; }, 40);
     }
 
@@ -2173,7 +2301,7 @@ function rTab2(btn, panelId) {
       font-size:clamp(.95rem,1.4vw,1.1rem);
       max-width:620px;line-height:1.6;margin:0;
     ">
-      Gestión de solicitudes de cortesías: Telconet, Megadatos y Security Data · <strong style="color:#dce8ff;">EQUIPO DE PLANIFICACIÓN – TERCERIZADOS</strong>
+      Gestión de solicitudes de cortesías: <span style="color:#00c9ff;font-weight:700;">Telconet</span>, <span style="color:#ff9900;font-weight:700;">Megadatos</span> y <span style="color:#00e576;font-weight:700;">Security Data</span> · <strong style="color:#dce8ff;">EQUIPO DE PLANIFICACIÓN – TERCERIZADOS</strong>
     </p>
 
     <!-- Botones de tema -->
